@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.yedam.classweb.command.ClassList;
 import co.yedam.classweb.command.Home;
 import co.yedam.classweb.command.Login;
 import co.yedam.classweb.command.Test01;
@@ -40,6 +41,7 @@ public class FrontController extends HttpServlet {
 		map.put("/home.do", new Home());
 		map.put("/test01.do", new Test01());
 		map.put("/login.do", new Login());
+		map.put("/classList.do", new ClassList());
 	}
 
 	/**
@@ -58,19 +60,18 @@ public class FrontController extends HttpServlet {
 		Command command = map.get(page);
 		String viewPage = command.execute(request, response);
 
-//		} 
-//		if (!viewPage.endsWith(".do") && !viewPage.endsWith(".jsp") ) {
-//			viewPage = viewPage + ".tiles";
-//		} else if (viewPage.endsWith(".jsp")) { // 타일즈를 안 태울 거야
-//			viewPage = "/WEB-INF/views/" + viewPage;
-//		}
-	if (!viewPage.endsWith(".do")) { // "home. do"
-			if (!viewPage.endsWith(".jsp")) {
-				viewPage = viewPage + ".tiles"; // "home/home"
-			} else {
-				viewPage = "/WEB-INF/views/" + viewPage; // "home/home.jsp"
-			}
+		if (!viewPage.endsWith(".do") && !viewPage.endsWith(".jsp") ) {
+			viewPage = viewPage + ".tiles";
+		} else if (viewPage.endsWith(".jsp")) { // 타일즈를 안 태울 거야
+			viewPage = "/WEB-INF/views/" + viewPage;
 		}
+//	if (!viewPage.endsWith(".do")) { // "home. do"
+//			if (!viewPage.endsWith(".jsp")) {
+//				viewPage = viewPage + ".tiles"; // "home/home"
+//			} else {
+//				viewPage = "/WEB-INF/views/" + viewPage; // "home/home.jsp"
+//			}
+//		}
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
