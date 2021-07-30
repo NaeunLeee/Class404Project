@@ -9,10 +9,11 @@ import java.util.List;
 
 import co.yedam.classweb.classes.service.ClassService;
 import co.yedam.classweb.classes.vo.ClassVO;
-import co.yedam.classweb.common.DAO;
+import co.yedam.classweb.common.DataSource;
 
 public class ClassServiceImpl implements ClassService {
 	
+	private DataSource dataSource = DataSource.getInstance();
 	private Connection conn;
 	private PreparedStatement psmt;
 	private ResultSet rs;
@@ -24,7 +25,7 @@ public class ClassServiceImpl implements ClassService {
 		String sql = "select * from class";
 		
 		try {
-			conn = DAO.getConnection();
+			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
 			while (rs.next()) {
