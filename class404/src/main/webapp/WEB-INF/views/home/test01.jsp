@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Class Web</title>
+<title>테스트 영역</title>
+<style>
+	.divs {
+	background-color: red;
+	}
+</style>
 </head>
 <body>
-<jsp:forward page="test01.do"></jsp:forward>
+<div class="divs">테스트 화면<br><br><br></div>
 </body>
 </html>

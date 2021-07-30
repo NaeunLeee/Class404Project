@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Class Web</title>
+<title>로그인 폼</title>
 </head>
 <body>
-<jsp:forward page="test01.do"></jsp:forward>
+	<div align="center">
+		<div><h1>로그인폼입니다!!!</h1></div>
+		<a href="test01.do">홈가기</a>
+	</div>
 </body>
 </html>
