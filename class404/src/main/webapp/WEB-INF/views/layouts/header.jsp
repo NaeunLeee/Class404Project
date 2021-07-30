@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Class Web</title>
+<title>Insert title here</title>
 </head>
 <body>
-<jsp:forward page="home.do"></jsp:forward>
+헤더영역
 </body>
 </html>

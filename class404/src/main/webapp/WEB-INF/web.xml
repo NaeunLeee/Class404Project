@@ -20,7 +20,7 @@
 	
 	<servlet>
 		<servlet-name>FrontController</servlet-name>
-		<servlet-class>co.micol.myhomepage.web.FrontController</servlet-class>
+		<servlet-class>co.yedam.classweb.web.FrontController</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
