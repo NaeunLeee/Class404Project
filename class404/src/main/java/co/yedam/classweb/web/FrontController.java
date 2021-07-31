@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.yedam.classweb.command.BoardList;
 import co.yedam.classweb.command.ClassList;
 import co.yedam.classweb.command.Home;
 import co.yedam.classweb.command.Login;
@@ -42,6 +43,7 @@ public class FrontController extends HttpServlet {
 		map.put("/test01.do", new Test01());
 		map.put("/login.do", new Login());
 		map.put("/classList.do", new ClassList());
+		map.put("boardList.do", new BoardList());
 	}
 
 	/**
