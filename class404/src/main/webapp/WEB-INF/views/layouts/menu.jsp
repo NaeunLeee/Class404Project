@@ -29,7 +29,7 @@
 				</header>
 				<ul>
 					<li><a href="home.do">홈</a></li>
-					<li><a href="login.do">로그인/회원가입</a></li>
+					<li><a href="loginForm.do">로그인/회원가입</a></li>
 					<li><a href="classList.do">수강클래스</a></li>
 					<li><a href="classInsert.do">수강신청</a></li>
 					<li><a href="boardList.do">커뮤니티</a></li>
