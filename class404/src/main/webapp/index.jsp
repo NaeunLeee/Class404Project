@@ -7,6 +7,6 @@
 <title>Class Web</title>
 </head>
 <body>
-<jsp:forward page="test01.do"></jsp:forward>
+<jsp:forward page="home.do"></jsp:forward>
 </body>
 </html>
