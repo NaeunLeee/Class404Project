@@ -19,9 +19,6 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-				<br>
-				<h3>${name}님, 환영합니다.</h3>
-				<br>
 
 				<!-- Banner -->
 				<section id="banner">

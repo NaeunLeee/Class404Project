@@ -30,7 +30,7 @@ public class Login implements Command {
 		} else {
 			String message = "존재하지 않는 아이디/패스워드 입니다.";
 			request.setAttribute("message", message);
-			page = "home/home";
+			page = "home/loginForm";
 		}
 		return page;
 		

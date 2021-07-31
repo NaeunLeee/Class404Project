@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.yedam.classweb.common.DAO;
 import co.yedam.classweb.common.DataSource;
 import co.yedam.classweb.member.service.MemberService;
 import co.yedam.classweb.member.vo.MemberVO;

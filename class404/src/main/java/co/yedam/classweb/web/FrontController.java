@@ -17,6 +17,7 @@ import co.yedam.classweb.command.Home;
 import co.yedam.classweb.command.Login;
 import co.yedam.classweb.command.Test01;
 import co.yedam.classweb.command.LoginForm;
+import co.yedam.classweb.command.Logout;
 import co.yedam.classweb.command.SignupForm;
 import co.yedam.classweb.common.Command;
 
@@ -44,9 +45,10 @@ public class FrontController extends HttpServlet {
 		map.put("/home.do", new Home());
 		map.put("/test01.do", new Test01());
 		map.put("/login.do", new Login());
+		map.put("/logout.do", new Logout());
+		map.put("/loginForm.do", new LoginForm());
 		map.put("/classList.do", new ClassList());
 		map.put("/boardList.do", new BoardList());
-		map.put("/loginForm.do", new LoginForm());
 		map.put("/signupForm.do", new SignupForm());
 	}
 

@@ -5,28 +5,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>강좌 클래스</title>
+<title>공지사항</title>
 </head>
 <body>
 <div align="center">
 	<div>
-		<table border="1">
+		<table>
 			<tr>
-				<th>강좌번호</th>
-				<th>강좌</th>
-				<th>강좌티쳐</th>
-				<th>강좌날짜</th>
-				<th>강좌장소</th>
-				<th>수강인원</th>
+				<th>순번</th>
+				<th>작성자</th>
+				<th>제목</th>
+				<th>작성일자</th>
+				<th>댓글수</th>
 			</tr>
 		<c:forEach var="list" items="${list}">
 				<tr>
-					<td>${ list.clId }</td>
-					<td>${ list.clName }</td>
-					<td>${ list.clTeacher }</td>
-					<td>${ list.clDate }</td>
-					<td>${ list.clPlace }</td>
-					<td>${ list.clStudent }</td>
+					<td>${ list.bId }</td>
+					<td>${ list.bWriter }</td>
+					<td>${ list.bTitle }</td>
+					<td>${ list.bDate }</td>
+					<td>${ list.bHit }</td>
 				</tr>
 			</c:forEach>			
 		</table>
