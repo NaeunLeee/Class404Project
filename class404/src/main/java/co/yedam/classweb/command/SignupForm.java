@@ -5,12 +5,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.classweb.common.Command;
 
-public class loginForm implements Command {
+public class SignupForm implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		return "home/loginForm.jsp";
+		return "home/signupForm";
 	}
 
 }

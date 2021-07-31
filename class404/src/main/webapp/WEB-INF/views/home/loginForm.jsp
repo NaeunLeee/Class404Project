@@ -70,7 +70,7 @@
 
 							<span class="txt1"> 를 잊어버렸나요? </span></li>
 
-						<li><span class="txt1"> 아직 회원이 아니신가요? </span> <a href="#"
+						<li><span class="txt1"> 아직 회원이 아니신가요? </span> <a href="signupForm.do"
 							class="txt2"> 회원가입하기 </a></li>
 					</ul>
 				</form>
