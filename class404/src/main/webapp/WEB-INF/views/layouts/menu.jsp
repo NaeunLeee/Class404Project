@@ -35,9 +35,10 @@
 					<c:if test="${ not empty name }">
 					<li><a href="logout.do">로그아웃</a></li>
 					</c:if>
+					<li><a href="boardList.do">공지사항</a></li>
 					<li><a href="classList.do">수강클래스</a></li>
 					<li><a href="classApply.do">수강신청</a></li>
-					<li><a href="boardList.do">커뮤니티</a></li>
+					
 				</ul>
 			</nav>
 
