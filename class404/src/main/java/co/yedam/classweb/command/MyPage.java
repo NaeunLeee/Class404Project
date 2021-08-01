@@ -18,9 +18,8 @@ public class MyPage implements Command {
 		MemberVO vo = new MemberVO();
 		
 		HttpSession session = request.getSession();
-		Object id = session.getAttribute("id");
 		String page = "";
-		// vo.setId(id);
+		vo.setId((String)session.getAttribute("id"));
 		vo = dao.memberSelect(vo);
 		
 		request.setAttribute("member", vo);
