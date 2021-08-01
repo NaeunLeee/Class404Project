@@ -8,9 +8,9 @@
 </head>
 <body>
 <div>
-수강번호 : ${class.clId}<br>
-강좌 : ${class.clName}<br>
-강사 : ${class.clTeacher}<br>
+수강번호 : ${list.clId}<br>
+강좌 : ${list.clName}<br>
+강사 : ${list.clTeacher}<br>
 </div>
 </body>
 </html>

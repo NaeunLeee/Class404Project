@@ -11,12 +11,6 @@
 		frm.clId.value = n;
 		frm.submit();
 	}
-	function paragraph_onmouseover() {
-		paragraph.style.color="lightpink";
-	}
-	function paragraph_onmouseout() {
-		paragraph.style.color="black";
-	}
 </script>
 </head>
 <body>
@@ -32,7 +26,9 @@
 					<th>최대인원</th>
 				</tr>
 				<c:forEach var="list" items="${list}">
-					<tr onclick="getRecord(${list.clId})">
+					<tr onmouseover="this.style.background='lightpink'" 
+						onmouseout="this.style.background='white'"
+						onclick="getRecord('${list.clId}')">
 						<td>${list.clId}</td>
 						<td>${list.clName}</td>
 						<td>${list.clTeacher}</td>
