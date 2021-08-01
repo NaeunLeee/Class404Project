@@ -22,7 +22,7 @@ public class ClassApplyConfirm implements Command {
 		int n1 = clDao.classApply(clid);
 		
 		HttpSession session = request.getSession();
-		int id = Integer.valueOf((String) session.getAttribute("id"));
+		String id = (String)session.getAttribute("id");
 		int n2 = memDao.memberApply(clid, id);
 		
 		String page = "";

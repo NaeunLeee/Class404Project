@@ -132,7 +132,7 @@ public class MemberServiceImpl implements MemberService {
 	}
 	
 	// 수강신청 시 clid 수정
-	public int memberApply(int clid, int id) {
+	public int memberApply(int clid, String id) {
 		int n = 0;
 		String sql = "update member set clid = ? where id = ?";
 		
@@ -140,7 +140,7 @@ public class MemberServiceImpl implements MemberService {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, clid);
-			psmt.setInt(2, id);
+			psmt.setString(2, id);
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
