@@ -14,11 +14,11 @@ public class Logout implements Command {
 
 		HttpSession session = request.getSession();
 		String message = session.getAttribute("name") + "님 정상 로그아웃 되었습니다. ";
-		// session.invalidate(); // 세션을 완전히 없앰 = invalidate() , remove는 안에 값만 지움
+		session.invalidate(); // 세션을 완전히 없앰 = invalidate() , remove는 안에 값만 지움
 		
 		// remove라고 사용해서 지우면 id는 살아있슴
-		session.removeAttribute("name");
-		session.removeAttribute("author");
+		//session.removeAttribute("name");
+		//session.removeAttribute("author");
 		
 		request.setAttribute("message", message);
 		

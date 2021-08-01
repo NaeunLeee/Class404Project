@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,12 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
+<script type="text/javascript">
+	funtion getFrm(n){
+		frm.id.value = n; // 선택한 행을 넘겨주는 동작부분
+		frm.submit();
+	}
+</script>
 </head>
 <body>
 	<!-- Header -->
@@ -27,6 +34,5 @@
 					class="label">Medium</span></a></li>
 		</ul>
 	</header>
-
 </body>
 </html>

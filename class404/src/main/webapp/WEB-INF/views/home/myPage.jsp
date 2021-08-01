@@ -7,6 +7,9 @@
 <title>마이페이지</title>
 </head>
 <body>
-	<h1>마이페이지!</h1>
+	<div align="right">
+		<h1>마이페이지</h1>
+		${id} : ${name}
+	</div>
 </body>
 </html>
