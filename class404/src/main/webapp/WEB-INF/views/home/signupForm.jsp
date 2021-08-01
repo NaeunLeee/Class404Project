@@ -28,6 +28,7 @@
 					value="1990-01-01" min="1920-01-01" max="2020-12-31" id="birth"
 					name="birth" placeholder value required>
 			</div>
+			<!-- 
 			<div>
 				<label for="hobbies">관심분야</label> 
 					<label><input type="checkbox" name="hobbies" value="공예">공예</label>
@@ -38,6 +39,7 @@
 					<label><input type="checkbox" name="hobbies" value="글쓰기">글쓰기</label>
 					<label><input type="checkbox" name="hobbies" value="디자인">디자인</label>
 			</div>
+			 -->
 			<br>
 			<div>
 				<button type="submit">회원가입</button>
