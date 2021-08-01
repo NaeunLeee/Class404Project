@@ -39,7 +39,7 @@
 					<li class="listFont"><a href="classList.do">수강클래스</a></li>
 					<li class="listFont"><a href="classApply.do">수강신청</a></li>
 					<c:if test="${ author == 'ADMIN' }">					
-						<li class="listFont"><a href="memberList.do">회원관리</a></li>
+						<li class="listFont"><a href="memberManagement.do">회원관리</a></li>
 					</c:if>					
 				</ul>
 			</nav>
