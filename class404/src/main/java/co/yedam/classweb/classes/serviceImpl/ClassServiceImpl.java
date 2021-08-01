@@ -18,7 +18,8 @@ public class ClassServiceImpl implements ClassService {
 	private PreparedStatement psmt;
 	private ResultSet rs;
 	
-	@Override
+	
+	// 클래스 목록 조회
 	public List<ClassVO> classSelectList() {
 		List<ClassVO> list = new ArrayList<ClassVO>();
 		ClassVO vo;
@@ -48,36 +49,88 @@ public class ClassServiceImpl implements ClassService {
 		return list;
 	}
 
-	@Override
+	// 클래스 한건 조회
 	public ClassVO classSelectOne(ClassVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select * from class where clid = ?";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, vo.getClId());
+			rs = psmt.executeQuery();
+			
+			while (rs.next()) {
+				vo = new ClassVO();
+				vo.setClId(rs.getInt("clid"));
+				vo.setClName(rs.getString("clname"));
+				vo.setClDate(rs.getDate("cldate"));
+				vo.setClPlace(rs.getString("clplace"));
+				vo.setClMax(rs.getInt("clmax"));
+				vo.setClStudent(rs.getInt("clstudent"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return vo;
 	}
 
-	@Override
+	// 수강신청
 	public int classApply(ClassVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		int n = 0;
+		int clid = vo.getClId();
+		String sql1 = "select clmax, clstudent from class where clid = ?";
+		PreparedStatement psmt1;
+		PreparedStatement psmt2;
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt1 = conn.prepareStatement(sql1);
+			psmt1.setInt(1, clid);
+			rs = psmt1.executeQuery();
+			int clmax = rs.getInt("clmax");
+			int clstudent = rs.getInt("clstudent");
+			
+			// 현재 수강신청인원이 최대인원을 넘지 않을때만 수강신청 가능
+			if (clstudent<clmax) {
+				String sql2 = "update class set clstudent = clstudent + 1 where clid = ?";
+				psmt2 = conn.prepareStatement(sql2);
+				psmt2.setInt(1, clid);
+				n = psmt2.executeUpdate();
+			} else {
+				// 최대인원을 넘으면 n을 마이너스로 돌려줘서 다른 클래스에서 써먹을수있도록
+				n = -1;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return n;
 	}
 
-	@Override
+	// 클래스 등록
 	public int classInsert(ClassVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	// 클래스 수정
 	public int classUpdate(ClassVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	// 클래스 삭제
 	public int classDelete(ClassVO vo) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 	
+	// 연결 해제
 	private void close() {
 		try {
 			if (rs != null) rs.close();

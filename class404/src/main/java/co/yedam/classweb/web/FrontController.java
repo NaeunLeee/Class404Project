@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.classweb.command.BoardList;
+import co.yedam.classweb.command.ClassApply;
 import co.yedam.classweb.command.ClassList;
 import co.yedam.classweb.command.Home;
 import co.yedam.classweb.command.Login;
@@ -35,14 +36,27 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/home.do", new Home());
 		map.put("/test01.do", new Test01());
+		
+		// 로그인
+		map.put("/loginForm.do", new LoginForm());
 		map.put("/login.do", new Login());
 		map.put("/logout.do", new Logout());
-		map.put("/loginForm.do", new LoginForm());
+		
+		// 클래스 조회
 		map.put("/classList.do", new ClassList());
+		
+		// 공지사항 조회
 		map.put("/boardList.do", new BoardList());
+		
+		// 회원가입
 		map.put("/signupForm.do", new SignupForm());
 		map.put("/signup.do", new Signup());
+		
+		// 마이페이지
 		map.put("/myPage.do", new MyPage());
+		
+		// 수강신청
+		map.put("/classApply.do", new ClassApply());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

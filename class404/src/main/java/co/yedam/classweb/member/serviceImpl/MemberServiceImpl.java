@@ -58,6 +58,7 @@ public class MemberServiceImpl implements MemberService {
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getId());
 			rs = psmt.executeQuery();
 			
 			while (rs.next()) {
@@ -107,7 +108,7 @@ public class MemberServiceImpl implements MemberService {
 	// 회원가입
 	public int memberInsert(MemberVO vo) {
 		String sql = "insert into member values (?, ?, ?, ?, ?, ?, ?)";
-		int r = 0;
+		int n = 0;
 		
 		try {
 			conn = dataSource.getConnection();
@@ -119,34 +120,34 @@ public class MemberServiceImpl implements MemberService {
 			psmt.setString(5, vo.getHobby());
 			psmt.setString(6, vo.getAuthor());
 			psmt.setString(7, vo.getState());
-			r = psmt.executeUpdate();
+			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			close();
 		}
 		
-		return r;
+		return n;
 	}
 
 	// 회원 삭제
 	public int memberDelete(MemberVO vo) {
 		
 		String sql = "delete from member where id = ?";
-		int r = 0;
+		int n = 0;
 		
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, vo.getId());
-			r = psmt.executeUpdate();
+			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			close();
 		}
 		
-		return r;
+		return n;
 	}
 
 	// 회원 정보 수정
