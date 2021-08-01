@@ -156,7 +156,7 @@ public class MemberServiceImpl implements MemberService {
 					psmt2.setString(2, id);
 					n = psmt2.executeUpdate();
 				} else {
-					n = -1;
+					n = 404;
 				}
 			}
 			

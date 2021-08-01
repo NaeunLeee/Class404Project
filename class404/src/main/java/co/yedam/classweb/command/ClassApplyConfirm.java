@@ -26,10 +26,10 @@ public class ClassApplyConfirm implements Command {
 		int n2 = memDao.memberApply(clid, id);
 		
 		String page = "";
-		if (n1 != 0 && n2 != 0) {
-			page = "home/classApplySuccess";
-		} else if (n1 < 0) {
+		if (n1 == 404 | n2 == 404) {
 			page = "home/classMaxError";
+		} else if (n1 != 0 && n2 != 0) {
+			page = "home/classApplySuccess";
 		} else {
 			page = "home/classApplyFail";
 		}
