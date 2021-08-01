@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.classweb.command.BoardList;
+import co.yedam.classweb.command.BoardSelect;
 import co.yedam.classweb.command.ClassApply;
 import co.yedam.classweb.command.ClassApplyConfirm;
 import co.yedam.classweb.command.ClassApplyForm;
@@ -52,6 +53,7 @@ public class FrontController extends HttpServlet {
 		
 		// 공지사항 조회
 		map.put("/boardList.do", new BoardList());
+		map.put("/boardSelect.do", new BoardSelect());
 		
 		// 회원가입
 		map.put("/signupForm.do", new SignupForm());
