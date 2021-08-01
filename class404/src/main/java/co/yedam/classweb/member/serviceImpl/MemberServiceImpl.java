@@ -134,14 +134,32 @@ public class MemberServiceImpl implements MemberService {
 	// 수강신청 시 clid 수정
 	public int memberApply(int clid, String id) {
 		int n = 0;
-		String sql = "update member set clid = ? where id = ?";
+		String sql1 = "select clmax, clstudent from class where clid = ?";
+		
+		PreparedStatement psmt1;
+		PreparedStatement psmt2;
 		
 		try {
 			conn = dataSource.getConnection();
-			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, clid);
-			psmt.setString(2, id);
-			n = psmt.executeUpdate();
+			psmt1 = conn.prepareStatement(sql1);
+			psmt1.setInt(1, clid);
+			
+			rs = psmt1.executeQuery();
+			while (rs.next()) {
+				int clmax = rs.getInt("clmax");
+				int clstudent = rs.getInt("clstudent");
+				
+				if (clstudent<clmax) {
+					String sql2 = "update member set clid = ? where id = ?";
+					psmt2 = conn.prepareStatement(sql2);
+					psmt1.setInt(1, clid);
+					psmt2.setString(2, id);
+					n = psmt2.executeUpdate();
+				} else {
+					n = -1;
+				}
+			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
