@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.classweb.command.BoardList;
 import co.yedam.classweb.command.ClassApply;
+import co.yedam.classweb.command.ClassApplyForm;
 import co.yedam.classweb.command.ClassList;
 import co.yedam.classweb.command.ClassSelect;
 import co.yedam.classweb.command.Home;
@@ -59,6 +60,7 @@ public class FrontController extends HttpServlet {
 		
 		// 수강신청
 		map.put("/classApply.do", new ClassApply());
+		map.put("/classApplyForm.do", new ClassApplyForm());
 		
 	}
 

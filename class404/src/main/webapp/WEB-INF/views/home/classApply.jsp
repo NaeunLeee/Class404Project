@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -9,9 +9,9 @@
 </head>
 <body>
 
-<div align="center">
-	<div>
-			<form id="frm" name="frm" action="" method="post">
+	<div align="center">
+		<div>
+			<form id="frm" name="frm" action="classApplyForm.do" method="post">
 				<table border="1">
 					<tr>
 						<th>강좌 번호</th>
@@ -38,6 +38,6 @@
 				</table>
 			</form>
 		</div>
-</div>
+	</div>
 </body>
 </html>
