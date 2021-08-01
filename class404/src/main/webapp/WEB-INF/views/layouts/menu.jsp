@@ -37,8 +37,7 @@
 					</c:if>
 					<li><a href="boardList.do">공지사항</a></li>
 					<li><a href="classList.do">수강클래스</a></li>
-					<li><a href="classApply.do">수강신청</a></li>
-					
+					<li><a href="classApply.do">수강신청</a></li>				
 				</ul>
 			</nav>
 
