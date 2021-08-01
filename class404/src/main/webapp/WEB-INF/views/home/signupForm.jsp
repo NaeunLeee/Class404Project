@@ -10,7 +10,7 @@
 <body>
 	<div>
 		<div align="center">회원가입</div>
-		<form id="frm" name="frm" action="" method="post">
+		<form id="frm" name="frm" action="signup.do" method="post">
 			<div>
 				<label for="id">아 이 디</label> <input type="text" id="id" name="id"
 					placeholder value required>

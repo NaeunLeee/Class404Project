@@ -19,30 +19,20 @@ import co.yedam.classweb.command.Test01;
 import co.yedam.classweb.command.LoginForm;
 import co.yedam.classweb.command.Logout;
 import co.yedam.classweb.command.MyPage;
+import co.yedam.classweb.command.Signup;
 import co.yedam.classweb.command.SignupForm;
 import co.yedam.classweb.common.Command;
 
-/**
- * Servlet implementation class FrontController
- */
 
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private HashMap<String, Command> map = new HashMap<String, Command>();
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public FrontController() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
 	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
 		map.put("/home.do", new Home());
 		map.put("/test01.do", new Test01());
 		map.put("/login.do", new Login());
@@ -51,16 +41,12 @@ public class FrontController extends HttpServlet {
 		map.put("/classList.do", new ClassList());
 		map.put("/boardList.do", new BoardList());
 		map.put("/signupForm.do", new SignupForm());
+		map.put("/signup.do", new Signup());
 		map.put("/myPage.do", new MyPage());
 	}
 
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		request.setCharacterEncoding("utf-8");
 
 		String uri = request.getRequestURI();
