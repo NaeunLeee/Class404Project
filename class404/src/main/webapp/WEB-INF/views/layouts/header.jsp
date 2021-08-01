@@ -24,6 +24,8 @@
 		<ul class="icons">
 			<li><a href="myPage.do" class="brands"><span
 					class="label">My Page</span></a></li>
+					<li><a href="logout.do" class="brands"><span
+					class="label">로그아웃</span></a></li>
 			<li><a href="https://twitter.com/?lang=ko"
 				class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 			<li><a href="https://ko-kr.facebook.com/"

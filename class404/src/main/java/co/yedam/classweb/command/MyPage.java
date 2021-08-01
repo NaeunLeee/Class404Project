@@ -19,15 +19,10 @@ public class MyPage implements Command {
 		
 		HttpSession session = request.getSession();
 		String page = "";
-		if(session.getId() != null) {
-			vo.setId(request.getParameter("id"));
-			vo = dao.memberSelect(vo);
-			request.setAttribute("member", vo);
-			page = "home/myPage";
-		}
-		else {
-		page ="home/loginForm.jsp";
-		}
+		vo.setId(request.getParameter("id"));
+		vo = dao.memberSelect(vo);
+		request.setAttribute("member", vo);
+		page = "home/myPage";
 		return page;
 	}
 
