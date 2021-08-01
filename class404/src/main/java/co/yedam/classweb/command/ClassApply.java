@@ -15,7 +15,7 @@ public class ClassApply implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// 수강신청
+		// 수강신청 전 목록 뿌려주는 클래스
 		ClassService classDao = new ClassServiceImpl();
 		List<ClassVO> list = new ArrayList<ClassVO>();
 		list = classDao.classSelectList();

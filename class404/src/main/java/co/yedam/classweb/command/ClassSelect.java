@@ -15,7 +15,7 @@ public class ClassSelect implements Command {
 		// 클래스 한건 조회
 		ClassService dao = new ClassServiceImpl();
 		ClassVO vo = new ClassVO();
-		System.out.println(request.getParameter("clId"));
+		
 		int n = Integer.valueOf(request.getParameter("clId"));
 		vo = dao.classSelectOne(n);
 		request.setAttribute("list", vo);

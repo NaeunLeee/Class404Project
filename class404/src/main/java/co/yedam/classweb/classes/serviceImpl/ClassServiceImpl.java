@@ -64,6 +64,7 @@ public class ClassServiceImpl implements ClassService {
 				vo = new ClassVO();
 				vo.setClId(no);
 				vo.setClName(rs.getString("clname"));
+				vo.setClTeacher(rs.getString("clteacher"));
 				vo.setClDate(rs.getDate("cldate"));
 				vo.setClPlace(rs.getString("clplace"));
 				vo.setClMax(rs.getInt("clmax"));
