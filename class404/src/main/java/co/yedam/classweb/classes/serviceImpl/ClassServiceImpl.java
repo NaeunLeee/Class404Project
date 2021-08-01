@@ -79,16 +79,15 @@ public class ClassServiceImpl implements ClassService {
 	}
 
 	// 수강신청
-	public int classApply(int clid) {
+	public int classApply(int clid, String id) {
 		int n = 0;
+		String sql1 = "select clmax, clstudent from class where clid = ?";
+		String sql2 = "update member set clid = ? where id = ?";
 		PreparedStatement psmt1;
 		PreparedStatement psmt2;
-		PreparedStatement psmt3;
 		
 		try {
 			conn = dataSource.getConnection();
-			// 최대인원과 현재 수강신청인원 확인
-			String sql1 = "select clmax, clstudent from class where clid = ?";
 			psmt1 = conn.prepareStatement(sql1);
 			psmt1.setInt(1, clid);
 			rs = psmt1.executeQuery();
@@ -98,23 +97,13 @@ public class ClassServiceImpl implements ClassService {
 				int clstudent = rs.getInt("clstudent");
 				
 				// 현재 수강신청인원이 최대인원 보다 작을 때만 수강신청 가능
-				if (clstudent<clmax) {
-					// 멤버 테이블에서 현재 수강인원 확인
-					String sql2 = "select count(*) from member where clid = ?";
+				if (clstudent < clmax) {
 					psmt2 = conn.prepareStatement(sql2);
 					psmt2.setInt(1, clid);
-					rs = psmt2.executeQuery();
-					
-					while (rs.next()) {
-						int cnt = rs.getInt("count(*)");
-						String sql3 = "update class set clstudent = ? where clid = ?";
-						psmt3 = conn.prepareStatement(sql3);
-						psmt3.setInt(1, cnt);
-						psmt3.setInt(2, clid);
-						n = psmt3.executeUpdate();
-					}
+					psmt2.setString(2, id);
+					n = psmt2.executeUpdate();
+					classRefresh();
 				} else {
-					// 최대인원을 넘으면 n을 마이너스로 돌려줘서 다른 클래스에서 써먹을수있도록
 					n = 404;
 				}
 			}
@@ -125,6 +114,46 @@ public class ClassServiceImpl implements ClassService {
 			close();
 		}
 		return n;
+	}
+	
+	// 클래스 인원 새로고침
+	public void classRefresh() {
+		PreparedStatement psmt1;
+		PreparedStatement psmt2;
+		PreparedStatement psmt3;
+		ResultSet rs1;
+		ResultSet rs2;
+		
+		String sql1 = "select clid from class";
+		String sql2 = "select count(*) from member where clid = ?";
+		String sql3 = "update class set clstudent = ? where clid = ?";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt1 = conn.prepareStatement(sql1);
+			rs1 = psmt1.executeQuery();
+			
+			while (rs1.next()) {
+				int clid = rs1.getInt("clid");
+				psmt2 = conn.prepareStatement(sql2);
+				psmt2.setInt(1, clid);
+				rs2 = psmt2.executeQuery();
+				
+				while (rs2.next()) {
+					int cnt = rs2.getInt("count(*)");
+					psmt3 = conn.prepareStatement(sql3);
+					psmt3.setInt(1, cnt);
+					psmt3.setInt(2, clid);
+					psmt3.executeUpdate();
+				}
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
 	}
 	
 	// 클래스 등록

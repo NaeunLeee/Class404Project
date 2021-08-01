@@ -13,7 +13,7 @@ public interface ClassService {
 	ClassVO classSelectOne(int no);
 	
 	// 수강 신청 
-	int classApply(int clid);
+	int classApply(int clid, String id);
 	
 	// 강의 추가
 	int classInsert(ClassVO vo);	
@@ -23,6 +23,9 @@ public interface ClassService {
 	
 	// 강의 삭제
 	int classDelete(ClassVO vo);
+	
+	// 수강신청인원 새로고침
+	void classRefresh();
 	
 	
 }

@@ -12,6 +12,5 @@ public interface MemberService {
 	int memberInsert(MemberVO vo);
 	int memberDelete(MemberVO vo);
 	int memberUpdate(MemberVO vo);
-	public int memberApply(int clid, String id);
 	
 }

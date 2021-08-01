@@ -23,24 +23,37 @@ public class ClassApplyConfirm implements Command {
 		String id = (String)session.getAttribute("id");
 		String page = "";
 		
-		int n1 = clDao.classApply(clid);
+		int n = clDao.classApply(clid, id);
 		
-		if (n1 == 404) {
+		if (n == 404) {
 			page = "home/classMaxError";
-			
-		} else if (n1 != 0 && n1 != 404) {
-			int n2 = memDao.memberApply(clid, id);
-			
-			if (n2 != 0) {
-				page = "home/classApplySuccess";
-			} else {
-				page = "home/classApplyFail";
-			}
-			
+		} else if (n!=0 && n!=404) {
+			page = "home/classApplySuccess";
 		} else {
 			page = "home/classApplyFail";
 		}
 		
+		
+//		int n1 = clDao.classApply(clid);
+//		
+//		
+//		if (n1 == 404) {
+//			page = "home/classMaxError";
+//			
+//		} else if (n1 != 0 && n1 != 404) {
+//			int n2 = memDao.memberApply(clid, id);
+//			clDao.classRefresh();
+//			
+//			if (n2 != 0) {
+//				page = "home/classApplySuccess";
+//			} else {
+//				page = "home/classApplyFail";
+//			}
+//			
+//		} else {
+//			page = "home/classApplyFail";
+//		}
+//		
 		return page;
 	}
 
