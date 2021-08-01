@@ -6,6 +6,16 @@
 <meta charset="UTF-8">
 
 <title>회원가입</title>
+<script>
+    $(document).ready(function() {
+        $( "select[name=hobbies]" ).val( "{{ month_text }}" );
+        $('select[name=month]').change(function () {
+        console.log($('select[name=month]').val());
+        month = $('select[name=month]').val();
+        $('.form').submit();
+    });
+});
+</script>
 </head>
 <body>
 	<div>
@@ -38,11 +48,17 @@
 					<label><input type="checkbox" name="hobbies" value="사진">사진</label>
 					<label><input type="checkbox" name="hobbies" value="글쓰기">글쓰기</label>
 					<label><input type="checkbox" name="hobbies" value="디자인">디자인</label>
-			</div>
-			 -->
-			<br>
+			</div>  -->
+			<br/>
+			관심분야
+			<select id ="hobbies" name="hobbies"> 
+				<option value="a" selected="selected">A</option>
+				<option value="b">B</option>
+				<option value="c">C</option>
+				<option value="d">D</option>
+			</select> <br>
 			<div>
-				<button type="submit">회원가입</button>
+				<button type="submit" >회원가입</button>
 			</div>
 		</form>
 	</div>

@@ -18,14 +18,8 @@ public class Signup implements Command {
 		MemberService dao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
 		
-//		String[] hobbies = request.getParameterValues("hobbies");
-//		String hobby = "";
-//		
-//		for (String str : hobbies) {
-//			hobby += str + ",";
-//		}
-//		
-//		hobby = hobby.substring(0, hobby.length()-1);
+		//String hobbies = request.getParameter("hobbies");
+		
 		
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		String birthYear = request.getParameter("birth").substring(0, 4);
@@ -35,7 +29,7 @@ public class Signup implements Command {
 		vo.setPassword(request.getParameter("password"));
 		vo.setName(request.getParameter("name"));
 		vo.setAge(age);
-//		vo.setHobby(hobby);
+		vo.setHobby(request.getParameter("hobbies"));
 		
 		int n = dao.memberInsert(vo);
 		String page = "";

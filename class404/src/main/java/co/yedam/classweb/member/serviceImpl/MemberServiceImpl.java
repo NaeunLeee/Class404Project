@@ -107,7 +107,8 @@ public class MemberServiceImpl implements MemberService {
 
 	// 회원가입
 	public int memberInsert(MemberVO vo) {
-		String sql = "insert into member values (?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT into member(id,password,name,age,hobby)"
+				+ " VALUES(?,?,?,?,?) ";
 		int n = 0;
 		
 		try {
@@ -118,8 +119,8 @@ public class MemberServiceImpl implements MemberService {
 			psmt.setString(3, vo.getName());
 			psmt.setInt(4, vo.getAge());
 			psmt.setString(5, vo.getHobby());
-			psmt.setString(6, vo.getAuthor());
-			psmt.setString(7, vo.getState());
+	//		psmt.setString(6, vo.getAuthor());
+	//		psmt.setString(7, vo.getState());
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
