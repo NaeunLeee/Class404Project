@@ -13,7 +13,7 @@ public interface ClassService {
 	ClassVO classSelectOne(int no);
 	
 	// 수강 신청 
-	int classApply(ClassVO vo);
+	int classApply(int clid);
 	
 	// 강의 추가
 	int classInsert(ClassVO vo);	

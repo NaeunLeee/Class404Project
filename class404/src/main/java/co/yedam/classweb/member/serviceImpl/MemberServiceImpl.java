@@ -130,6 +130,26 @@ public class MemberServiceImpl implements MemberService {
 		
 		return n;
 	}
+	
+	// 수강신청 시 clid 수정
+	public int memberApply(int clid, int id) {
+		int n = 0;
+		String sql = "update member set clid = ? where id = ?";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, clid);
+			psmt.setInt(2, id);
+			n = psmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return n;
+	}
 
 	// 회원 삭제
 	public int memberDelete(MemberVO vo) {

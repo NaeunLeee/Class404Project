@@ -79,9 +79,8 @@ public class ClassServiceImpl implements ClassService {
 	}
 
 	// 수강신청
-	public int classApply(ClassVO vo) {
+	public int classApply(int clid) {
 		int n = 0;
-		int clid = vo.getClId();
 		String sql1 = "select clmax, clstudent from class where clid = ?";
 		PreparedStatement psmt1;
 		PreparedStatement psmt2;
