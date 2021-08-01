@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +22,7 @@ import co.yedam.classweb.command.Test01;
 import co.yedam.classweb.command.LoginForm;
 import co.yedam.classweb.command.Logout;
 import co.yedam.classweb.command.MyPage;
+import co.yedam.classweb.command.MyPageError;
 import co.yedam.classweb.command.MyPageUpdate;
 import co.yedam.classweb.command.Signup;
 import co.yedam.classweb.command.SignupForm;
@@ -60,6 +60,7 @@ public class FrontController extends HttpServlet {
 		// 마이페이지
 		map.put("/myPage.do", new MyPage());
 		map.put("/myPageUpdate.do", new MyPageUpdate());
+		map.put("/myPageError.do", new MyPageError());
 		
 		// 수강신청
 		map.put("/classApply.do", new ClassApply());
