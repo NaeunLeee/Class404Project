@@ -50,8 +50,46 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public BoardVO boardSelect(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO 한행조회
+		String sql = "select * from board where bid = ? ";
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, vo.getbId());
+			rs = psmt.executeQuery();
+			if (rs.next()) { // 한 행만 가지고 올꺼라서 while 안써도됨
+				vo = new BoardVO();
+				vo.setbId(rs.getInt("bid"));
+				vo.setbTitle(rs.getNString("btitle"));
+				vo.setbContent(rs.getString("bcontent"));
+				vo.setbWriter(rs.getNString("bwriter"));
+				vo.setbDate(rs.getDate("bdate"));
+				vo.setbHit(rs.getInt("bhit"));
+
+				hitUpdate(vo.getbId()); // 조회수 증가 메소드
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+
+		return vo;
+	}
+	
+	private void hitUpdate(int id) {
+		// TODO 조회수 증가 (읽고나면 조회수가 증가해있을꺼임)
+		String sql = "update board set bhit = bhit + 1 where bid = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, id);
+			psmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -71,6 +109,8 @@ public class BoardServiceImpl implements BoardService {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	
 
 	private void close() {
 		try {
