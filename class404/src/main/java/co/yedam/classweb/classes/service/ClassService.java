@@ -10,7 +10,7 @@ public interface ClassService {
 	List<ClassVO> classSelectList();
 	
 	// 강의 한건 조회
-	ClassVO classSelectOne(ClassVO vo);
+	ClassVO classSelectOne(int no);
 	
 	// 수강 신청 
 	int classApply(ClassVO vo);

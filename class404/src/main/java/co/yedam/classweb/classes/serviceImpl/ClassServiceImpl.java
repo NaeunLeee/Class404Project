@@ -50,18 +50,19 @@ public class ClassServiceImpl implements ClassService {
 	}
 
 	// 클래스 한건 조회
-	public ClassVO classSelectOne(ClassVO vo) {
+	public ClassVO classSelectOne(int no) {
 		String sql = "select * from class where clid = ?";
+		ClassVO vo = new ClassVO();
 		
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, vo.getClId());
+			psmt.setInt(1, no);
 			rs = psmt.executeQuery();
 			
 			while (rs.next()) {
 				vo = new ClassVO();
-				vo.setClId(rs.getInt("clid"));
+				vo.setClId(no);
 				vo.setClName(rs.getString("clname"));
 				vo.setClDate(rs.getDate("cldate"));
 				vo.setClPlace(rs.getString("clplace"));
