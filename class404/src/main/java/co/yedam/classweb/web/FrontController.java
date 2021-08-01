@@ -21,6 +21,7 @@ import co.yedam.classweb.command.ClassList;
 import co.yedam.classweb.command.ClassSelect;
 import co.yedam.classweb.command.DeleteBoard;
 import co.yedam.classweb.command.Home;
+import co.yedam.classweb.command.InsertBoard;
 import co.yedam.classweb.command.Login;
 import co.yedam.classweb.command.Test01;
 import co.yedam.classweb.command.UpdateBoard;
@@ -62,6 +63,7 @@ public class FrontController extends HttpServlet {
 		map.put("/updateBoard.do", new UpdateBoard());
 		map.put("/deleteBoard.do", new DeleteBoard());
 		map.put("/boardAdd.do", new BoardAdd());
+		map.put("/insertBoard.do", new InsertBoard());
 		
 		// 회원가입
 		map.put("/signupForm.do", new SignupForm());
