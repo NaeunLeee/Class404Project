@@ -24,7 +24,7 @@ public class MyPageUpdate implements Command {
 		int n = dao.memberUpdate(vo);
 		
 		if(n != 0) {
-			page = "home/myPage";
+			page = "myPage.do";
 		}else {
 			page = "home/myPageError";
 		}
