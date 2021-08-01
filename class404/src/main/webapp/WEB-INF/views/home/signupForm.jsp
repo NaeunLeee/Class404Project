@@ -6,16 +6,6 @@
 <meta charset="UTF-8">
 
 <title>회원가입</title>
-<script>
-    $(document).ready(function() {
-        $( "select[name=hobbies]" ).val( "{{ month_text }}" );
-        $('select[name=month]').change(function () {
-        console.log($('select[name=month]').val());
-        month = $('select[name=month]').val();
-        $('.form').submit();
-    });
-});
-</script>
 </head>
 <body>
 	<div>
