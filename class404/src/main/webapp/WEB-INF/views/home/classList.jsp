@@ -5,7 +5,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>강좌 클래스</title>
+<title>클래스 목록</title>
+<script>
+	function getRecord(n) {
+		frm.clId.value = n;
+		frm.submit();
+	}
+</script>
 </head>
 <body>
 	<div align="center">
@@ -20,16 +26,21 @@
 					<th>최대인원</th>
 				</tr>
 				<c:forEach var="list" items="${list}">
-					<tr>
-						<td>${ list.clId }</td>
-						<td>${ list.clName }</td>
-						<td>${ list.clTeacher }</td>
-						<td>${ list.clDate }</td>
-						<td>${ list.clPlace }</td>
-						<td>${ list.clMax }</td>
+					<tr onclick="getRecord(${list.clId})">
+						<td>${list.clId}</td>
+						<td>${list.clName}</td>
+						<td>${list.clTeacher}</td>
+						<td>${list.clDate}</td>
+						<td>${list.clPlace}</td>
+						<td>${list.clMax}</td>
 					</tr>
 				</c:forEach>
 			</table>
+		</div>
+		<div>
+			<form id="frm" action="classSelect.do" method="post">
+				<input type="hidden" id="clId" name="clId">
+			</form>
 		</div>
 	</div>
 </body>

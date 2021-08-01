@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import co.yedam.classweb.command.BoardList;
 import co.yedam.classweb.command.ClassApply;
 import co.yedam.classweb.command.ClassList;
+import co.yedam.classweb.command.ClassSelect;
 import co.yedam.classweb.command.Home;
 import co.yedam.classweb.command.Login;
 import co.yedam.classweb.command.Test01;
@@ -44,6 +45,7 @@ public class FrontController extends HttpServlet {
 		
 		// 클래스 조회
 		map.put("/classList.do", new ClassList());
+		map.put("/classSelect.do", new ClassSelect());
 		
 		// 공지사항 조회
 		map.put("/boardList.do", new BoardList());
@@ -57,6 +59,7 @@ public class FrontController extends HttpServlet {
 		
 		// 수강신청
 		map.put("/classApply.do", new ClassApply());
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
