@@ -12,7 +12,7 @@
 		강좌 : ${list.clName}<br>
 		강사 : ${list.clTeacher}<br>
 		
-		<form id="frm" name="frm" action="" method="post">
+		<form id="frm" name="frm" action="classApplyConfirm.do" method="post">
 			<button type="submit">수강신청</button>
 			<button type="button">홈으로</button>
 		</form>
