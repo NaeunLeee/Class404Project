@@ -89,20 +89,24 @@ public class ClassServiceImpl implements ClassService {
 			conn = dataSource.getConnection();
 			psmt1 = conn.prepareStatement(sql1);
 			psmt1.setInt(1, clid);
-			rs = psmt1.executeQuery();
-			int clmax = rs.getInt("clmax");
-			int clstudent = rs.getInt("clstudent");
 			
-			// 현재 수강신청인원이 최대인원을 넘지 않을때만 수강신청 가능
-			if (clstudent<clmax) {
-				String sql2 = "update class set clstudent = clstudent + 1 where clid = ?";
-				psmt2 = conn.prepareStatement(sql2);
-				psmt2.setInt(1, clid);
-				n = psmt2.executeUpdate();
-			} else {
-				// 최대인원을 넘으면 n을 마이너스로 돌려줘서 다른 클래스에서 써먹을수있도록
-				n = -1;
+			rs = psmt1.executeQuery();
+			while (rs.next()) {
+				int clmax = rs.getInt("clmax");
+				int clstudent = rs.getInt("clstudent");
+				
+				// 현재 수강신청인원이 최대인원을 넘지 않을때만 수강신청 가능
+				if (clstudent<clmax) {
+					String sql2 = "update class set clstudent = clstudent + 1 where clid = ?";
+					psmt2 = conn.prepareStatement(sql2);
+					psmt2.setInt(1, clid);
+					n = psmt2.executeUpdate();
+				} else {
+					// 최대인원을 넘으면 n을 마이너스로 돌려줘서 다른 클래스에서 써먹을수있도록
+					n = -1;
+				}
 			}
+			
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
