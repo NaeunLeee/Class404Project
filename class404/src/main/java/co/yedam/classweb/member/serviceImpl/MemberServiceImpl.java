@@ -151,8 +151,24 @@ public class MemberServiceImpl implements MemberService {
 
 	// 회원 정보 수정
 	public int memberUpdate(MemberVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		// TODO 마이페이지 수정
+		String sql = "update member set password = ? , age = ? , hobby = ? where id = ?";
+		int n = 0;
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getPassword());
+			psmt.setInt(2, vo.getAge());
+			psmt.setString(3, vo.getHobby());
+			psmt.setString(4, vo.getId());
+			n = psmt.executeUpdate();
+			
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return n;
+		
 	}
 
 	// 커넥션 종료
