@@ -11,6 +11,10 @@
 		frm.bId.value = n; // 선택한 행을 넘겨주는 동작부분
 		frm.submit();
 	}
+	function getRecord2(n){  // 인자를 하나 받음
+		frmm.bId.value = n; // 선택한 행을 넘겨주는 동작부분
+		frmm.submit();
+	}
 </script>
 </head>
 <body>
@@ -44,11 +48,14 @@
 			<button type="button" onclick="location.href='boardList.do'">목록</button>&nbsp;&nbsp;
 			<c:if test="${ author == 'ADMIN' }">
 			<button type="button" onclick="getRecord('${ board.bId }')">수정</button>&nbsp;&nbsp;
-			<button type="button" onclick="location.href='deleteBoard.do'">삭제</button>
+			<button type="button" onclick="getRecord2('${ board.bId }')">삭제</button>
 			</c:if>
 		</div>
 		<div>
 			<form id="frm" name="frm" action="boardUpdateForm.do" method="post">
+				<input type="hidden" id="bId" name="bId" >
+			</form>
+			<form id="frmm" name="frmm" action="deleteBoard.do" method="post">
 				<input type="hidden" id="bId" name="bId" >
 			</form>
 		</div>

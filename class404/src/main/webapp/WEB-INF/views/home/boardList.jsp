@@ -7,15 +7,15 @@
 <meta charset="UTF-8">
 <title>공지사항</title>
 </head>
-<script> 
-	function getRecord(n) { 
+<script>
+	function getRecord(n) {
 		frm.bId.value = n;
-		frm.submit(); 
-	} 
+		frm.submit();
+	}
 </script>
 <body>
 	<div align="center">
-	<h2>공 지 사 항</h2>
+		<h2>공 지 사 항</h2>
 		<br>
 		<div>
 			<c:if test="${ empty name }">
@@ -42,6 +42,11 @@
 						</tr>
 					</c:forEach>
 				</table>
+				<c:if test="${ author == 'ADMIN' }">
+					<div align="right">
+						<button type="button" onclick="location.href='boardAdd.do'">글작성</button>
+					</div>
+				</c:if>
 			</c:if>
 		</div>
 		<div>

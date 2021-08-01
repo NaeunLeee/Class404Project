@@ -8,18 +8,15 @@ import co.yedam.classweb.board.serviceImpl.BoardServiceImpl;
 import co.yedam.classweb.board.vo.BoardVO;
 import co.yedam.classweb.common.Command;
 
-public class UpdateBoard implements Command {
+public class DeleteBoard implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO 수정폼
-		BoardService dao = new BoardServiceImpl();
+		// TODO 공지사항 삭제
+		BoardService boardDao = new BoardServiceImpl();
 		BoardVO vo = new BoardVO();
-		
-		vo.setbTitle(request.getParameter("bTitle"));
-		vo.setbContent(request.getParameter("bContent"));
 		vo.setbId(Integer.valueOf(request.getParameter("bId")));
-		int n = dao.boardUpdate(vo);
+		int n = boardDao.boardDelete(vo);
 		
 		String page="";
 		if (n != 0) {

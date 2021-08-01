@@ -94,20 +94,64 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int boardInsert(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		// TODO 글 추가
+				String sql = "insert into board(bid, btitle, bcontent, bwriter,bdate) " 
+							 + "values (B_SEQ.nextval,?, ?, ?, ?)";
+				int n = 0;
+				try {
+					conn = dataSource.getConnection();
+					psmt = conn.prepareStatement(sql);
+					psmt.setString(1, vo.getbTitle());
+					psmt.setString(2, vo.getbContent());
+					psmt.setString(3, vo.getbWriter());
+					psmt.setDate(4, vo.getbDate());
+					n = psmt.executeUpdate();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				} finally {
+					close();
+				}
+
+				return n;
 	}
 
 	@Override
 	public int boardUpdate(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "update board set btitle = ? , bcontent = ? where bid = ?";
+		int n = 0;
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getbTitle());
+			psmt.setString(2, vo.getbContent());
+			psmt.setInt(3, vo.getbId());
+			n = psmt.executeUpdate();
+			
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return n;
 	}
 
 	@Override
 	public int boardDelete(BoardVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		// TODO 한 행 삭제하기
+				String sql = "delete from board where bid = ?";
+				int n = 0;
+				try {
+					conn = dataSource.getConnection();
+					psmt = conn.prepareStatement(sql);
+					psmt.setInt(1, vo.getbId());
+					n = psmt.executeUpdate();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				} finally {
+					close();
+				}
+				return n;
 	}
 	
 	
