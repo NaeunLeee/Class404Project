@@ -15,7 +15,6 @@ public class ClassApplyForm implements Command {
 		// 수강신청 폼
 		ClassService dao = new ClassServiceImpl();
 		ClassVO vo = new ClassVO();
-		
 		// 먼저 클릭한 클래스의 세부 사항을 보여줌
 		int n = Integer.valueOf(request.getParameter("clId"));
 		vo = dao.classSelectOne(n);

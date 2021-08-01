@@ -6,12 +6,18 @@
 <head>
 <meta charset="UTF-8">
 <title>수강신청</title>
+<script>
+	function getId(n){
+		frm.clId.value = n;
+		frm.submit(); 
+	}
+</script>
 </head>
 <body>
 
 	<div align="center">
 		<div>
-			<form id="frm" name="frm" action="classApplyForm.do" method="post">
+			
 				<table border="1">
 					<tr>
 						<th>강좌 번호</th>
@@ -32,11 +38,13 @@
 							<td>${ list.clPlace }</td>
 							<td>${ list.clStudent }</td>
 							<td>${ list.clMax }</td>
-							<td><input type="submit" value="수강신청"></td>
+							<td>
+							<button onclick="getId('${list.clId}')">수강신청</button></td>
 						</tr>
 					</c:forEach>
 				</table>
-			</form>
+				<form id="frm" name="frm" action="classApplyForm.do" method="post">
+							<input type="hidden" id="clId" name="clId"></form>
 		</div>
 	</div>
 </body>
