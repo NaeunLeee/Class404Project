@@ -6,6 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+	function getRecord(n){  // 인자를 하나 받음
+		frm.bId.value = n; // 선택한 행을 넘겨주는 동작부분
+		frm.submit();
+	}
+</script>
 </head>
 <body>
 	<div align="center">
