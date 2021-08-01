@@ -18,7 +18,7 @@ public class ClassApplyConfirm implements Command {
 		ClassService clDao = new ClassServiceImpl();
 		MemberService memDao = new MemberServiceImpl();
 	
-		int clid = Integer.valueOf(request.getParameter("clid"));
+		int clid = Integer.valueOf(request.getParameter("clId"));
 		int n1 = clDao.classApply(clid);
 		
 		HttpSession session = request.getSession();
