@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.classweb.command.BoardList;
 import co.yedam.classweb.command.BoardSelect;
+import co.yedam.classweb.command.BoardUpdateForm;
 import co.yedam.classweb.command.ClassApply;
 import co.yedam.classweb.command.ClassApplyConfirm;
 import co.yedam.classweb.command.ClassApplyForm;
@@ -20,6 +21,7 @@ import co.yedam.classweb.command.ClassSelect;
 import co.yedam.classweb.command.Home;
 import co.yedam.classweb.command.Login;
 import co.yedam.classweb.command.Test01;
+import co.yedam.classweb.command.UpdateBoard;
 import co.yedam.classweb.command.LoginForm;
 import co.yedam.classweb.command.Logout;
 import co.yedam.classweb.command.MyPage;
@@ -54,6 +56,8 @@ public class FrontController extends HttpServlet {
 		// 공지사항 조회
 		map.put("/boardList.do", new BoardList());
 		map.put("/boardSelect.do", new BoardSelect());
+		map.put("/boardUpdateForm.do", new BoardUpdateForm());
+		map.put("/updateBoard.do", new UpdateBoard());
 		
 		// 회원가입
 		map.put("/signupForm.do", new SignupForm());
