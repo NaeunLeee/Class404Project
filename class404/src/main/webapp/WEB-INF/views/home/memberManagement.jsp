@@ -6,6 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+	function getRecord(n) {
+		frm.name.value = n;
+		frm.submit();
+	}
+</script>
 </head>
 <body>
 <div align="center">
@@ -27,10 +33,13 @@
 				<td>${list.age}</td>
 				<td>${list.hobby}</td>
 				<td>${list.author}</td>
-				<td><button>권한수정</button></td>
+				<td><button onclick="getRecord('${list.name}')">권한수정</button></td>
 			</tr>
 			</c:forEach>
 		</table>
+		<form id="frm" action="memberUpdate.do" method="post">
+				<input type="hidden" id="name" name="name">
+			</form>
 		<div align="right">
 			<input type="text" size="50">
 			<button>검색</button>
