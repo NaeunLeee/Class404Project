@@ -11,6 +11,12 @@
 		frm.clId.value = n;
 		frm.submit();
 	}
+	function paragraph_onmouseover() {
+		paragraph.style.color="lightpink";
+	}
+	function paragraph_onmouseout() {
+		paragraph.style.color="black";
+	}
 </script>
 </head>
 <body>
