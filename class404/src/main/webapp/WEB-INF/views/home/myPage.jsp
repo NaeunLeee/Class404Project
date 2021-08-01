@@ -32,6 +32,9 @@
 						<label for="age">나 이</label> <input type="text" id="age"
 							name="age" value="${member.age}" required="required">
 					</div>
+					<label for="clId">수강신청한 강좌</label>
+					<input type="text" id="clId"
+							name="clId" value="${member.clName}" required="required" disabled="disabled">
 					<br />
 			관심분야
 			<select id="hobbies" name="hobbies">

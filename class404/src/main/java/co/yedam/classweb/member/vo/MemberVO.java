@@ -1,6 +1,8 @@
 package co.yedam.classweb.member.vo;
 
-public class MemberVO {
+import co.yedam.classweb.classes.vo.ClassVO;
+
+public class MemberVO extends ClassVO {
 	
 	private String id;
 	private String password;
