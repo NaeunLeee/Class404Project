@@ -28,16 +28,19 @@
 					<h2>Menu</h2>
 				</header>
 				<ul>
-					<li><a href="home.do">홈</a></li>
+					<li class="listFont"><a href="home.do">홈</a></li>
 					<c:if test="${ empty name }">
-					<li><a href="loginForm.do">로그인/회원가입</a></li>
+					<li class="listFont"><a href="loginForm.do">로그인/회원가입</a></li>
 					</c:if>
 					<c:if test="${ not empty name }">
-					<li><a href="logout.do">로그아웃</a></li>
+					<li class="listFont"><a href="logout.do">로그아웃</a></li>
 					</c:if>
-					<li><a href="boardList.do">공지사항</a></li>
-					<li><a href="classList.do">수강클래스</a></li>
-					<li><a href="classApply.do">수강신청</a></li>				
+					<li class="listFont"><a href="boardList.do">공지사항</a></li>
+					<li class="listFont"><a href="classList.do">수강클래스</a></li>
+					<li class="listFont"><a href="classApply.do">수강신청</a></li>
+					<c:if test="${ author == 'ADMIN' }">					
+						<li class="listFont"><a href="memberList.do">회원관리</a></li>
+					</c:if>					
 				</ul>
 			</nav>
 

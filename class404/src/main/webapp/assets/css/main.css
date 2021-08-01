@@ -1003,7 +1003,7 @@ header.major > :last-child {
   margin: 0 0 2em 0;
   padding: 0 0.75em 0.5em 0; }
   
-#menu > ul > li > a {
+li.listFont > a {
 	font-family:"Nanum Gothic", sans-serif;
 }
 
