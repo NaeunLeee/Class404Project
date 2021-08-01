@@ -32,7 +32,7 @@
 							<td>${ list.clPlace }</td>
 							<td>${ list.clStudent }</td>
 							<td>${ list.clMax }</td>
-							<td><button type="submit">수강신청</button></td>
+							<td><input type="submit" value="수강신청"></td>
 						</tr>
 					</c:forEach>
 				</table>

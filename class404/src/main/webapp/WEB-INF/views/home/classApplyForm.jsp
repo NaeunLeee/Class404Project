@@ -13,8 +13,8 @@
 		강사 : ${list.clTeacher}<br>
 		
 		<form id="frm" name="frm" action="classApplyConfirm.do" method="post">
-			<button type="submit">수강신청</button>
-			<button type="button">홈으로</button>
+			<input type="submit" value="수강신청"><br>
+			<a href="home.do">홈으로</a>
 		</form>
 	</div>
 </body>
