@@ -17,23 +17,30 @@ public class ClassApplyConfirm implements Command {
 		// 수강신청 확정
 		ClassService clDao = new ClassServiceImpl();
 		MemberService memDao = new MemberServiceImpl();
-	
+		HttpSession session = request.getSession();
+		
 		int clid = Integer.valueOf(request.getParameter("clId"));
+		String id = (String)session.getAttribute("id");
+		String page = "";
+		
 		int n1 = clDao.classApply(clid);
 		
-		HttpSession session = request.getSession();
-		String id = (String)session.getAttribute("id");
-		int n2 = memDao.memberApply(clid, id);
-		
-		String page = "";
-		if (n1 == 404 | n2 == 404) {
+		if (n1 == 404) {
 			page = "home/classMaxError";
-		} else if (n1 != 0 && n2 != 0) {
-			page = "home/classApplySuccess";
+			
+		} else if (n1 != 0 && n1 != 404) {
+			int n2 = memDao.memberApply(clid, id);
+			
+			if (n2 != 0) {
+				page = "home/classApplySuccess";
+			} else {
+				page = "home/classApplyFail";
+			}
+			
 		} else {
 			page = "home/classApplyFail";
 		}
-				
+		
 		return page;
 	}
 
