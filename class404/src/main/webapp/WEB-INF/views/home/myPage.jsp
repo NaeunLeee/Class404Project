@@ -8,8 +8,10 @@
 <title>마이페이지</title>
 </head>
 <body>
-	<div align="left">
+	<div align="center">
 		<h3>마이페이지</h3>
+		<br>
+		<div align="left">
 		<c:if test="${ empty name }">
 			로그인 정보가 존재하지 않습니다. <a href="loginForm.do">로그인</a>
 		</c:if>
@@ -49,7 +51,7 @@
 					</div>
 			</form>
 		</c:if>
-
+</div>
 	</div>
 </body>
 </html>
