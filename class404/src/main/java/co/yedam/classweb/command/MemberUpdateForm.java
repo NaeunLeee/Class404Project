@@ -8,21 +8,20 @@ import co.yedam.classweb.member.service.MemberService;
 import co.yedam.classweb.member.serviceImpl.MemberServiceImpl;
 import co.yedam.classweb.member.vo.MemberVO;
 
-public class MemberUpdate implements Command {
+public class MemberUpdateForm implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// 회원 정보를 실제로 수정하여 커밋하는 클래스
+		// 회원 정보 수정 폼을 뿌려주는 클래스
 		MemberService dao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
 		
-		String message = "";
 		String id = (String)request.getAttribute("id");
+		vo = dao.memSelectById(id);
 		
+		request.setAttribute("list", vo);
 		
-		
-		
-		return "home/memberUpdate";
+		return "home/memberUpdateForm";
 	}
 
 }
