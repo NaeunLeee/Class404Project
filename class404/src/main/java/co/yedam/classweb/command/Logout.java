@@ -23,7 +23,7 @@ public class Logout implements Command {
 		request.setAttribute("message", message);
 		
 		
-		return "home/logout";
+		return "home/home";
 	}
 
 }

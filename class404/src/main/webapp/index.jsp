@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,6 @@
 <title>Class Web</title>
 </head>
 <body>
-<jsp:forward page="home.do"></jsp:forward>
+	<jsp:forward page="home.do"></jsp:forward>
 </body>
 </html>

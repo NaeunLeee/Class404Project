@@ -36,7 +36,7 @@
 					<li class="listFont"><a href="logout.do">로그아웃</a></li>
 					</c:if>
 					<li class="listFont"><a href="boardList.do">공지사항</a></li>
-					<li class="listFont"><a href="classList.do">수강클래스</a></li>
+					<li class="listFont"><a href="classList.do">클래스</a></li>
 					<c:if test="${ not empty name }">
 					<li class="listFont"><a href="classApply.do">수강신청</a></li>
 					<li class="listFont"><a href="teacherList.do">강사신청</a></li>
@@ -56,12 +56,12 @@
 				<header class="major">
 					<h2>Class 404</h2>
 				</header>
-				<p>클래스 404는 모든 사람이 사랑하는 일을 하며 살 수 있도록 세상을 바꾸고자 합니다.</p>
+				<p>클래스 404는 배움을 나누며 함께 성장하는 세상을 꿈꿉니다.</p>
 				<ul class="contact">
-					<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-					<li class="icon solid fa-phone">(000) 000-0000</li>
-					<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-						Nashville, TN 00000-0000
+					<li class="icon solid fa-envelope"><a href="#">ask@yedam.ac</a></li>
+					<li class="icon solid fa-phone">(053) 421-2460</li>
+					<li class="icon solid fa-home">대구광역시 중구 국채보상로 537<br />
+						Fax:053-356-3939
 					</li>
 				</ul>
 			</section>
@@ -69,9 +69,7 @@
 			<!-- Footer -->
 			<footer id="footer">
 				<p class="copyright">
-					&copy; Untitled. All rights reserved. Demo Images: <a
-						href="https://unsplash.com">Unsplash</a>. Design: <a
-						href="https://html5up.net">HTML5 UP</a>.
+					&copy; Untitled. All rights reserved.
 				</p>
 			</footer>
 

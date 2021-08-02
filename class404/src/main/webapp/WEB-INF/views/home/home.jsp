@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +19,11 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-
-
+			<c:if test="${not empty name}">
+				<br>
+				<h3>${name}님, 환영합니다.</h3>
+				<br>
+			</c:if>
 				<!-- Banner -->
 				<section id="banner">
 					<div class="content">
@@ -48,65 +51,53 @@
 				<!-- Section -->
 				<section>
 					<header class="major">
-						<h2>Ipsum sed dolor</h2>
+						<h2>인기 강좌</h2>
 					</header>
 					<div class="posts">
 						<article>
 							<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-							<h3>Interdum aenean</h3>
-							<p>Aenean ornare velit lacus, ac varius enim lorem
-								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-								nulla amet lorem feugiat tempus aliquam.</p>
+							<h3>일러스트 입문</h3>
+							<p>시선을 사로잡는 마법의 색, 앤디와 함께하는 캐릭터 일러스트 입문</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
 							<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-							<h3>Nulla amet dolore</h3>
-							<p>Aenean ornare velit lacus, ac varius enim lorem
-								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-								nulla amet lorem feugiat tempus aliquam.</p>
+							<h3>레진 아트 초급</h3>
+							<p>내 공간을 빛내줄 '레진 인테리어 소품' 만들기</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
 							<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-							<h3>Tempus ullamcorper</h3>
-							<p>Aenean ornare velit lacus, ac varius enim lorem
-								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-								nulla amet lorem feugiat tempus aliquam.</p>
+							<h3>PPT 활용 고급</h3>
+							<p>내일 당장 실무에 써먹는 상위 1% 광고인의 PPT 신공</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
 							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-							<h3>Sed etiam facilis</h3>
-							<p>Aenean ornare velit lacus, ac varius enim lorem
-								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-								nulla amet lorem feugiat tempus aliquam.</p>
+							<h3>라이트룸 입문</h3>
+							<p>사진 입문자를 위한 쉽게 배우고 빨리 써먹는 사진과 라이트룸</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
 							<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-							<h3>Feugiat lorem aenean</h3>
-							<p>Aenean ornare velit lacus, ac varius enim lorem
-								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-								nulla amet lorem feugiat tempus aliquam.</p>
+							<h3>직장인 요리교실</h3>
+							<p>혼자서도 잘해요! 예담쉐프와 함께하는 직장인 혼밥 요리교실</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
 							<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-							<h3>Amet varius aliquam</h3>
-							<p>Aenean ornare velit lacus, ac varius enim lorem
-								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-								nulla amet lorem feugiat tempus aliquam.</p>
+							<h3>영어 고급 회화 기술</h3>
+							<p>220문장으로 토익부터 회화까지! 비즈니스 영어 완성</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
 							</ul>

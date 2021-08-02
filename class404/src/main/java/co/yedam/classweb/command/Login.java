@@ -26,7 +26,7 @@ public class Login implements Command {
 			session.setAttribute("name", vo.getName());
 			session.setAttribute("author", vo.getAuthor());
 			session.setAttribute("id", vo.getId());
-			page = "home/loginSuccess";
+			page = "home/home";
 		} else {
 			String message = "존재하지 않는 아이디/패스워드 입니다.";
 			request.setAttribute("message", message);
