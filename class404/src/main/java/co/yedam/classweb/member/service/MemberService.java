@@ -13,4 +13,6 @@ public interface MemberService {
 	int memberDelete(MemberVO vo);
 	int memberUpdate(MemberVO vo);
 	
+	int memberAuthorUpdate(MemberVO vo);
+	
 }

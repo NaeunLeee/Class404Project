@@ -7,9 +7,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
-	function getRecord(n,nn) {
+	function getRecord(n ,e) {
 		frm.id.value = n;
-		frm.name.value = nn;
+		frm.name.value = e;
 		frm.submit();
 	}
 </script>
@@ -43,7 +43,7 @@
 		<br />
 		<div>
 			<button type="button" onclick="location.href='teacherList.do'">목록</button>&nbsp;&nbsp;
-			<button type="button" onclick="getRecord('${ vo.id },${vo.name }')">권한부여</button>
+			<button type="button" onclick="getRecord('${ vo.id }','${ vo.name }')">권한부여</button>
 		</div>
 		<div>
 			<form id="frm" name="frm" action="authorUpdate.do" method="post">

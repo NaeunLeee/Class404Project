@@ -186,6 +186,28 @@ public class MemberServiceImpl implements MemberService {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally {
+			close();
+		}
+
+		return n;
+
+	}
+	
+	public int memberAuthorUpdate(MemberVO vo) {
+		String sql = "update member set author= 'TEACHER' where id = ? and name = ?";
+		int n = 0;
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getId());
+			psmt.setString(2, vo.getName());
+			n = psmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
 		}
 
 		return n;
