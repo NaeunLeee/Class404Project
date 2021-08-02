@@ -32,7 +32,6 @@ import co.yedam.classweb.command.Login;
 import co.yedam.classweb.command.LoginForm;
 import co.yedam.classweb.command.Logout;
 import co.yedam.classweb.command.MemberList;
-import co.yedam.classweb.command.MemberManagement;
 import co.yedam.classweb.command.MemberUpdate;
 import co.yedam.classweb.command.MemberUpdateForm;
 import co.yedam.classweb.command.MyPage;
@@ -96,9 +95,7 @@ public class FrontController extends HttpServlet {
 		// 관리자 회원관리
 		map.put("/memberList.do", new MemberList());
 		map.put("/memberUpdateForm.do", new MemberUpdateForm());
-		
 		map.put("/memberUpdate.do", new MemberUpdate());
-		map.put("/memberManagement.do", new MemberManagement());
 		map.put("/authorUpdate.do", new AuthorUpdate());
 		
 		// 강사신청
