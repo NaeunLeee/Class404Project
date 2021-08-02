@@ -15,6 +15,7 @@
 <body>
 <body>
 	<h4>강사신청</h4>
+	<c:if test="${ author == 'ADMIN' }">
 	<div>
 		<table>
 			<tr>
@@ -39,6 +40,11 @@
 				<input type="hidden" id="id" name="id">
 			</form>
 		</div>
+	</div>
+	</c:if>
+	<br>
+	<div>
+		<button type="button" onclick="location.href='teacherAdd.do'">신청등록</button>
 	</div>
 </body>
 </html>

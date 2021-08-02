@@ -17,15 +17,14 @@ public class TeacherServiceImpl implements TeacherService {
 	private Connection conn;
 	private PreparedStatement psmt;
 	private ResultSet rs;
-	
-	
+
 	@Override
 	public List<TeacherVO> teacherSelectList() {
 		// 강사신청 목록
 		List<TeacherVO> list = new ArrayList<TeacherVO>();
 		TeacherVO vo;
 		String sql = "select * from teacher";
-		
+
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
@@ -45,7 +44,7 @@ public class TeacherServiceImpl implements TeacherService {
 		} finally {
 			close();
 		}
-		
+
 		return list;
 	}
 
@@ -53,7 +52,7 @@ public class TeacherServiceImpl implements TeacherService {
 	public TeacherVO teacherSelect(TeacherVO vo) {
 		// TODO 한 건 상세보기
 		String sql = "select * from teacher where id = ?";
-		
+
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
@@ -73,14 +72,32 @@ public class TeacherServiceImpl implements TeacherService {
 		} finally {
 			close();
 		}
-		
+
 		return vo;
 	}
 
 	@Override
 	public int teacherInsert(TeacherVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		// TODO 강사신청
+		String sql = " insert into teacher values(?,?,?,?,?,sysdate)";
+		int n =0;
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getId());
+			psmt.setString(2, vo.getName());
+			psmt.setString(3, vo.getLicense());
+			psmt.setString(4, vo.getCareer());
+			psmt.setString(5, vo.getField());
+			n = psmt.executeUpdate();
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+
+		return n;
 	}
 
 	@Override
@@ -94,16 +111,19 @@ public class TeacherServiceImpl implements TeacherService {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+
 	private void close() {
 		try {
-			if (rs != null) rs.close();
-			if (psmt != null) psmt.close();
-			if (conn != null) conn.close();
+			if (rs != null)
+				rs.close();
+			if (psmt != null)
+				psmt.close();
+			if (conn != null)
+				conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

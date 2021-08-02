@@ -11,8 +11,7 @@ public class TeacherAdd implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO 강사신청하기
 		
-		
-		return null;
+		return "home/teacherAdd";
 	}
 
 }
