@@ -33,7 +33,7 @@
 							value="${list.clMax}" placeholder value required></td>
 					</tr>
 					<tr>
-						<td colspan="4"><textarea rows="5" cols="110">${list.clDetail}</textarea>
+						<td colspan="4"><textarea rows="5" cols="110" id="clDetail" name="clDetail">${list.clDetail}</textarea>
 						</td>
 					</tr>
 				</table>

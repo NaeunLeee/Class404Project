@@ -214,7 +214,7 @@ public class ClassServiceImpl implements ClassService {
 	// 클래스 수정
 	public int classUpdate(ClassVO vo, int clId) {
 		int n = 0;
-		String sql = "update class set clname = ?, clplace = ?, clmax = ? where clid = ?";
+		String sql = "update class set clname = ?, clplace = ?, clmax = ?, cldetail = ? where clid = ?";
 
 		try {
 			conn = dataSource.getConnection();
@@ -222,7 +222,8 @@ public class ClassServiceImpl implements ClassService {
 			psmt.setString(1, vo.getClName());
 			psmt.setString(2, vo.getClPlace());
 			psmt.setInt(3, vo.getClMax());
-			psmt.setInt(4, clId);
+			psmt.setString(4, vo.getClDetail());
+			psmt.setInt(5, clId);
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -28,6 +28,7 @@ public class ClassUpdate implements Command {
 		vo1.setClPlace(request.getParameter("clPlace"));
 		vo1.setClDate(Date.valueOf(request.getParameter("clDate")));
 		vo1.setClMax(Integer.valueOf(request.getParameter("clMax")));
+		vo1.setClDetail(request.getParameter("clDetail"));
 		
 		vo2 = dao.clSelectByTeacher(clTeacher);
 		int clId = vo2.getClId();
