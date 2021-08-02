@@ -22,10 +22,10 @@ public interface ClassService {
 	int classInsert(ClassVO vo);	
 	
 	// 강의 수정
-	int classUpdate(ClassVO vo);
+	int classUpdate(ClassVO vo, int clId);
 	
 	// 강의 삭제
-	int classDelete(ClassVO vo);
+	int classDelete(int clId);
 	
 	// 수강신청인원 새로고침
 	void classRefresh();

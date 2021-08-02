@@ -211,17 +211,17 @@ public class ClassServiceImpl implements ClassService {
 	}
 
 	// 클래스 수정
-	public int classUpdate(ClassVO vo) {
+	public int classUpdate(ClassVO vo, int clId) {
 		int n = 0;
-		String sql = "update class set clname = ?, clteacher = ?, clplace = ?, clmax = ? where clid = ?";
+		String sql = "update class set clname = ?, clplace = ?, clmax = ? where clid = ?";
 
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, vo.getClName());
-			psmt.setString(2, vo.getClTeacher());
-			psmt.setString(3, vo.getClPlace());
-			psmt.setInt(4, vo.getClMax());
+			psmt.setString(2, vo.getClPlace());
+			psmt.setInt(3, vo.getClMax());
+			psmt.setInt(4, clId);
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -233,14 +233,14 @@ public class ClassServiceImpl implements ClassService {
 	}
 
 	// 클래스 삭제
-	public int classDelete(ClassVO vo) {
+	public int classDelete(int clId) {
 		int n = 0;
 		String sql = "delete from class where clid = ?";
 
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, vo.getClId());
+			psmt.setInt(1, clId);
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
