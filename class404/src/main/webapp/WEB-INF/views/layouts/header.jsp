@@ -22,11 +22,11 @@
 		<a href="home.do" class="logo"><strong>&nbsp;&nbsp;Class 404</strong></a>
 			<!-- 	<img class="cl_logo" width="50" height="50" src="images/class404_logo.png" alt="AVATAR"> -->
 		<ul class="icons">
-			<li><a href="myPage.do" class="brands"><span class="label">My Page</span></a></li>
 			<c:if test="${ empty name }">
 				<li><a href="loginForm.do" class="brands"><span class="label">로그인</span></a></li>
 			</c:if>
 			<c:if test="${ not empty name }">
+			<li><a href="myPage.do" class="brands"><span class="label">My Page</span></a></li>
 				<li><a href="logout.do" class="brands"><span class="label">로그아웃</span></a></li>
 			</c:if>
 			<li><a href="https://twitter.com/?lang=ko" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
