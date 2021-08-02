@@ -5,12 +5,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.classweb.common.Command;
 
-public class ClassInsertForm implements Command {
+public class ClassInsert implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		return "home/classInsertForm";
+		return null;
 	}
 
 }
