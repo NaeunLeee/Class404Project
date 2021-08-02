@@ -158,20 +158,69 @@ public class ClassServiceImpl implements ClassService {
 	
 	// 클래스 등록
 	public int classInsert(ClassVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		int n = 0;
+		String sql = "insert into class (clid, clname, clteacher, cldate, clplace, clmax, clstudent) "
+				+ " values (?, ?, ?, ?, ?, ?, ?)";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, vo.getClId());
+			psmt.setString(2, vo.getClName());
+			psmt.setString(3, vo.getClTeacher());
+			psmt.setDate(4, vo.getClDate());
+			psmt.setString(5, vo.getClPlace());
+			psmt.setInt(6, vo.getClMax());
+			psmt.setInt(7, vo.getClStudent());
+			n = psmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return n;
 	}
 
 	// 클래스 수정
 	public int classUpdate(ClassVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		int n = 0;
+		String sql = "update class set clname = ?, clteacher = ?, clplace = ?, clmax = ? where clid = ?";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getClName());
+			psmt.setString(2, vo.getClTeacher());
+			psmt.setString(3, vo.getClPlace());
+			psmt.setInt(4, vo.getClMax());
+			n = psmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return n;
 	}
 
 	// 클래스 삭제
 	public int classDelete(ClassVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		int n = 0;
+		String sql = "delete from class where clid = ?";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, vo.getClId());
+			n = psmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return n;
 	}
 	
 	// 연결 해제
