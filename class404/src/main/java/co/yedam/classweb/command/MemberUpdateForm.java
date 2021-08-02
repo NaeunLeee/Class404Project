@@ -16,10 +16,10 @@ public class MemberUpdateForm implements Command {
 		MemberService dao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
 		
-		String id = (String)request.getAttribute("id");
+		String id = (String)request.getParameter("id");
 		vo = dao.memSelectById(id);
 		
-		request.setAttribute("list", vo);
+		request.setAttribute("member", vo);
 		
 		return "home/memberUpdateForm";
 	}

@@ -222,7 +222,7 @@ public class MemberServiceImpl implements MemberService {
 
 	}
 	
-	// 관리자의 회원 정보 수정 
+	// 관리자가 회원 정보 수정 
 	public int memUpdateByAdmin(String id, MemberVO vo) {
 		int n = 0;
 		String sql = "update member set id = ?, name = ?, age = ?, author = ? where id = ?";

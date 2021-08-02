@@ -12,17 +12,16 @@
 			<table>
 				<tr>
 					<th bgcolor="f2f2f2">아 이 디</th>
-					<td><input type="text" id="id" name="id" value="${list.id}"
-						placeholder value required></td>
+					<td><input type="text" id="id" name="id" value="${member.id}" placeholder value required></td>
 				</tr>
 				<tr>
 					<th bgcolor="f2f2f2">이 름</th>
 					<td><input type="text" id="name" name="name"
-						value="${list.name}" placeholder value required></td>
+						value="${member.name}" placeholder value required></td>
 				</tr>
 				<tr>
 					<th bgcolor="f2f2f2">나 이</th>
-					<td><input type="text" id="age" name="age" value="${list.age}"
+					<td><input type="text" id="age" name="age" value="${member.age}"
 						placeholder value required></td>
 				</tr>
 				<tr>
@@ -33,6 +32,9 @@
 					</select></td>
 				</tr>
 			</table>
+			<div>
+				<input type="hidden" id="formerId" name="formerId" value="${member.id}">
+			</div>
 			<div>
 				<button type="submit">수 정</button>
 				<button onclick="location.href='memberList.do'">목 록</button>

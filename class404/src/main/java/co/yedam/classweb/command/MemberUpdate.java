@@ -17,12 +17,24 @@ public class MemberUpdate implements Command {
 		MemberVO vo = new MemberVO();
 		
 		String message = "";
-		String id = (String)request.getAttribute("id");
+		String id = (String)request.getParameter("formerId");
 		
+		vo.setId(request.getParameter("id"));
+		vo.setName(request.getParameter("name"));
+		vo.setAge(Integer.valueOf(request.getParameter("age")));
+		vo.setAuthor(request.getParameter("author"));
 		
+		int n = dao.memUpdateByAdmin(id, vo);
 		
+		if (n != 0) {
+			message = "수정에 성공하였습니다!";
+		} else {
+			message = "수정에 실패했습니다.";
+		}
 		
-		return "home/memberUpdate";
+		request.setAttribute("message", message);
+		
+		return "home/memUpdateMessage";
 	}
 
 }
