@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.yedam.classweb.command.AuthorUpdate;
 import co.yedam.classweb.command.BoardAdd;
 import co.yedam.classweb.command.BoardList;
 import co.yedam.classweb.command.BoardSelect;
@@ -37,6 +38,7 @@ import co.yedam.classweb.command.MyPageError;
 import co.yedam.classweb.command.MyPageUpdate;
 import co.yedam.classweb.command.Signup;
 import co.yedam.classweb.command.SignupForm;
+import co.yedam.classweb.command.TeacherAdd;
 import co.yedam.classweb.command.TeacherInsert;
 import co.yedam.classweb.command.TeacherList;
 import co.yedam.classweb.command.TeacherSelect;
@@ -92,11 +94,13 @@ public class FrontController extends HttpServlet {
 		// 관리자 회원관리
 		map.put("/memberUpdate.do", new MemberUpdate());
 		map.put("/memberManagement.do", new MemberManagement());
+		map.put("/authorUpdate.do", new AuthorUpdate());
 		
 		// 강사신청
 		map.put("/teacherList.do", new TeacherList());
 		map.put("/teacherSelect.do", new TeacherSelect());
 		map.put("/teacherInsert.do", new TeacherInsert());
+		map.put("/teacherAdd.do", new TeacherAdd());
 		
 		// 강좌 등록, 수정, 삭제
 		map.put("/classInsertForm.do", new ClassInsertForm());

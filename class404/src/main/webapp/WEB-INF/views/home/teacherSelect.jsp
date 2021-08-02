@@ -6,6 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+	function getRecord(n,nn) {
+		frm.id.value = n;
+		frm.name.value = nn;
+		frm.submit();
+	}
+</script>
 </head>
 <body>
 <div align="center">
@@ -35,19 +42,15 @@
 		</div>
 		<br />
 		<div>
-			<button type="button" onclick="location.href='boardList.do'">목록</button>&nbsp;&nbsp;
-			<c:if test="${ author == 'ADMIN' }">
-			<button type="button" onclick="getRecord('${ board.bId }')">수정</button>&nbsp;&nbsp;
-			<button type="button" onclick="getRecord2('${ board.bId }')">삭제</button>
-			</c:if>
+			<button type="button" onclick="location.href='teacherList.do'">목록</button>&nbsp;&nbsp;
+			<button type="button" onclick="getRecord('${ vo.id },${vo.name }')">권한부여</button>
 		</div>
 		<div>
-			<form id="frm" name="frm" action="boardUpdateForm.do" method="post">
-				<input type="hidden" id="bId" name="bId" >
+			<form id="frm" name="frm" action="authorUpdate.do" method="post">
+				<input type="hidden" id="id" name="id" >
+				<input type="hidden" id="name" name="name" >
 			</form>
-			<form id="frmm" name="frmm" action="deleteBoard.do" method="post">
-				<input type="hidden" id="bId" name="bId" >
-			</form>
+			
 		</div>
 	</div>
 </body>

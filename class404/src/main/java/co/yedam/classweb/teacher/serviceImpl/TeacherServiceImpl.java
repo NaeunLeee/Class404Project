@@ -51,8 +51,30 @@ public class TeacherServiceImpl implements TeacherService {
 
 	@Override
 	public TeacherVO teacherSelect(TeacherVO vo) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO 한 건 상세보기
+		String sql = "select * from teacher where id = ?";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getId());
+			rs = psmt.executeQuery();
+			while (rs.next()) {
+				vo = new TeacherVO();
+				vo.setId(rs.getString("id"));
+				vo.setName(rs.getString("name"));
+				vo.setLicense(rs.getString("license"));
+				vo.setCareer(rs.getString("career"));
+				vo.setField(rs.getString("field"));
+				vo.settDate(rs.getDate("tdate"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return vo;
 	}
 
 	@Override
