@@ -63,7 +63,7 @@
 							<h3>일러스트 입문</h3>
 							<p>시선을 사로잡는 마법의 색, 앤디와 함께하는 캐릭터 일러스트 입문</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="classList.do" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
@@ -71,7 +71,7 @@
 							<h3>레진 아트 초급</h3>
 							<p>내 공간을 빛내줄 '레진 인테리어 소품' 만들기</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="classList.do" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
@@ -79,7 +79,7 @@
 							<h3>PPT 활용 고급</h3>
 							<p>내일 당장 실무에 써먹는 상위 1% 광고인의 PPT 신공</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="classList.do" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
@@ -87,7 +87,7 @@
 							<h3>라이트룸 입문</h3>
 							<p>사진 입문자를 위한 쉽게 배우고 빨리 써먹는 사진과 라이트룸</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="classList.do" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
@@ -95,7 +95,7 @@
 							<h3>직장인 요리교실</h3>
 							<p>혼자서도 잘해요! 예담쉐프와 함께하는 직장인 혼밥 요리교실</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="classList.do" class="button">More</a></li>
 							</ul>
 						</article>
 						<article>
@@ -103,7 +103,7 @@
 							<h3>영어 고급 회화 기술</h3>
 							<p>220문장으로 토익부터 회화까지! 비즈니스 영어 완성</p>
 							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+								<li><a href="classList.do" class="button">More</a></li>
 							</ul>
 						</article>
 					</div>
@@ -113,43 +113,35 @@
 				<!-- Section -->
 				<section>
 					<header class="major">
-						<h2>Erat lacinia</h2>
+						<h2>Class 404 철학</h2>
 					</header>
 					<div class="features">
 						<article>
 							<span class="icon fa-gem"></span>
 							<div class="content">
-								<h3>Portitor ullamcorper</h3>
-								<p>Aenean ornare velit lacus, ac varius enim lorem
-									ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-									nulla amet lorem feugiat tempus aliquam.</p>
+								<h3>일 잘하는 사람의 경험을 공유하세요</h3>
+								<p>현업에 도움되는 스킬부터 마인드셋까지 직무교육도 온라인으로 트렌디하게</p>
 							</div>
 						</article>
 						<article>
 							<span class="icon solid fa-paper-plane"></span>
 							<div class="content">
-								<h3>Sapien veroeros</h3>
-								<p>Aenean ornare velit lacus, ac varius enim lorem
-									ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-									nulla amet lorem feugiat tempus aliquam.</p>
+								<h3>개인의 성장이 곧 회사의 성장입니다</h3>
+								<p>자신이 관심있는 분야를 언제 어디서나 스스로 탐구하고 경험할 수 있도록</p>
 							</div>
 						</article>
 						<article>
 							<span class="icon solid fa-rocket"></span>
 							<div class="content">
-								<h3>Quam lorem ipsum</h3>
-								<p>Aenean ornare velit lacus, ac varius enim lorem
-									ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-									nulla amet lorem feugiat tempus aliquam.</p>
+								<h3>업무의 창의성은 딴짓에서 시작합니다</h3>
+								<p>말랑말랑한 조직문화를 위해 구성원이 함께 즐길 수 있는 콘텐츠로</p>
 							</div>
 						</article>
 						<article>
 							<span class="icon solid fa-signal"></span>
 							<div class="content">
-								<h3>Sed magna finibus</h3>
-								<p>Aenean ornare velit lacus, ac varius enim lorem
-									ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
-									nulla amet lorem feugiat tempus aliquam.</p>
+								<h3>구성원들은 자유롭게 선택해요</h3>
+								<p>원하는 클래스를 무제한 수강해요. 앱과 웹으로 원할때 어디서나 즐겨요. 온라인으로 편하게 질문해요.</p>
 							</div>
 						</article>
 					</div>
