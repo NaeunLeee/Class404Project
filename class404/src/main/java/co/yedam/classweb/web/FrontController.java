@@ -17,6 +17,7 @@ import co.yedam.classweb.command.BoardUpdateForm;
 import co.yedam.classweb.command.ClassApply;
 import co.yedam.classweb.command.ClassApplyConfirm;
 import co.yedam.classweb.command.ClassApplyForm;
+import co.yedam.classweb.command.ClassInsert;
 import co.yedam.classweb.command.ClassList;
 import co.yedam.classweb.command.ClassSelect;
 import co.yedam.classweb.command.DeleteBoard;
@@ -82,12 +83,15 @@ public class FrontController extends HttpServlet {
 		map.put("/classApplyForm.do", new ClassApplyForm());
 		map.put("/classApplyConfirm.do", new ClassApplyConfirm());
 		
-		//관리자 회원관리
+		// 관리자 회원관리
 		map.put("/memberUpdate.do", new MemberUpdate());
 		map.put("/memberManagement.do", new MemberManagement());
 		
-		//강사신청
+		// 강사신청
 		map.put("/teacherAdd.do", new TeacherAdd());
+		
+		// 강좌 등록, 수정, 삭제
+		map.put("/classInsert.do", new ClassInsert());
 
 	}
 
