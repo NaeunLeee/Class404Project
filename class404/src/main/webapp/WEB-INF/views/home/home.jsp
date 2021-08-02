@@ -26,8 +26,6 @@
 			</c:if>
 			<c:if test="${empty name}">
 				<br>
-				<br>
-				<br>
 			</c:if>
 				<!-- Banner -->
 				<section id="banner">
