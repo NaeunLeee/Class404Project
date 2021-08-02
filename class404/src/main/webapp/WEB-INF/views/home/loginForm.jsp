@@ -66,10 +66,11 @@
 					</div>
 
 					<ul class="login-more p-t-190">
+					<!-- 
 						<li class="m-b-8"><a href="#" class="txt2"> 아이디 또는 비밀번호 </a>
 
 							<span class="txt1"> 를 잊어버렸나요? </span></li>
-
+					 -->
 						<li><span class="txt1"> 아직 회원이 아니신가요? </span> <a href="signupForm.do"
 							class="txt2"> 회원가입하기 </a></li>
 					</ul>
