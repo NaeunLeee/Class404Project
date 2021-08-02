@@ -1,6 +1,7 @@
 package co.yedam.classweb.command;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +21,7 @@ public class ClassInsert implements Command {
 		ClassVO vo = new ClassVO();
 		HttpSession session = request.getSession();
 		
+	
 		vo.setClTeacher((String)session.getAttribute("name"));
 		vo.setClName(request.getParameter("clName"));
 		vo.setClDate(Date.valueOf(request.getParameter("clDate")));
