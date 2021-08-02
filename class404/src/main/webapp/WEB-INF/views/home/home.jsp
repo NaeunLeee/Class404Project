@@ -24,21 +24,21 @@
 				<h3>${name}님, 환영합니다.</h3>
 				<br>
 			</c:if>
+			<c:if test="${empty name}">
+				<br>
+				<br>
+				<br>
+			</c:if>
 				<!-- Banner -->
 				<section id="banner">
 					<div class="content">
 						<header>
 							<h1>
-								Hi, I’m Class 404<br /> by yedam Prj
+								배우며 함께 성장하는<br> Class 404 입니다
 							</h1>
 							<p>Making &nbsp;&nbsp; Lee naeun, Kwon sumin</p>
 						</header>
-						<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu.
-							Proin aliquam facilisis ante interdum congue. Integer mollis,
-							nisl amet convallis, porttitor magna ullamcorper, amet egestas
-							mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id
-							euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor
-							sit nullam.</p>
+						<p>클래스 404는 모든 사람이 사랑하는 일을 하며 살 수 있도록 세상을 바꾸고자 합니다.</p>
 						<ul class="actions">
 							<li><a href="#" class="button big">Learn More</a></li>
 						</ul>
