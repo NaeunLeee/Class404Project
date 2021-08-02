@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>강사 신청 등록이 완료되었십니다!</h3>
+<h3>강사 신청 등록이 완료되었습니다!</h3>
 <a href="home.do">홈가기</a>
 </body>
 </html>
