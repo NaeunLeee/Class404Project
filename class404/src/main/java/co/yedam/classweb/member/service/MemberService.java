@@ -11,7 +11,7 @@ public interface MemberService {
 	MemberVO memberSelect(MemberVO vo);
 	MemberVO memberLogin(MemberVO vo);
 	int memberInsert(MemberVO vo);
-	int memberDelete(MemberVO vo);
+	int memberDelete(String id);
 	int memberUpdate(MemberVO vo);
 	int memUpdateByAdmin(String id, MemberVO vo);
 	int memberAuthorUpdate(MemberVO vo);

@@ -179,7 +179,7 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	// 회원 삭제
-	public int memberDelete(MemberVO vo) {
+	public int memberDelete(String id) {
 
 		String sql = "delete from member where id = ?";
 		int n = 0;
@@ -187,7 +187,7 @@ public class MemberServiceImpl implements MemberService {
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, vo.getId());
+			psmt.setString(1, id);
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

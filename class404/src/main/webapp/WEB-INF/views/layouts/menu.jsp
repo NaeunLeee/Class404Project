@@ -38,7 +38,9 @@
 					<li class="listFont"><a href="boardList.do">공지사항</a></li>
 					<li class="listFont"><a href="classList.do">클래스</a></li>
 					<c:if test="${ not empty name }">
+					<!--  
 					<li class="listFont"><a href="classApply.do">수강신청</a></li>
+					-->
 					<li class="listFont"><a href="teacherList.do">강사신청</a></li>
 					</c:if>
  					<c:if test="${ author == 'ADMIN' }">					
