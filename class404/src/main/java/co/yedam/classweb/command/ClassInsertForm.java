@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.classweb.common.Command;
 
-public class ClassInsert implements Command {
+public class ClassInsertForm implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
