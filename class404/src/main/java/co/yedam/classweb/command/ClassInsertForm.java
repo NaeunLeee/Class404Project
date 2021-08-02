@@ -9,7 +9,7 @@ public class ClassInsertForm implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+		// 강좌 등록 폼을 뿌려주는 클래스
 		return "home/classInsertForm";
 	}
 

@@ -160,18 +160,17 @@ public class ClassServiceImpl implements ClassService {
 	public int classInsert(ClassVO vo) {
 		int n = 0;
 		String sql = "insert into class (clid, clname, clteacher, cldate, clplace, clmax, clstudent) "
-				+ " values (?, ?, ?, ?, ?, ?, ?)";
+				+ " values (CL_SEQ.nextval, ?, ?, ?, ?, ?, ?)";
 		
 		try {
 			conn = dataSource.getConnection();
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, vo.getClId());
-			psmt.setString(2, vo.getClName());
-			psmt.setString(3, vo.getClTeacher());
-			psmt.setDate(4, vo.getClDate());
-			psmt.setString(5, vo.getClPlace());
-			psmt.setInt(6, vo.getClMax());
-			psmt.setInt(7, vo.getClStudent());
+			psmt.setString(1, vo.getClName());
+			psmt.setString(2, vo.getClTeacher());
+			psmt.setDate(3, vo.getClDate());
+			psmt.setString(4, vo.getClPlace());
+			psmt.setInt(5, vo.getClMax());
+			psmt.setInt(6, vo.getClStudent());
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
