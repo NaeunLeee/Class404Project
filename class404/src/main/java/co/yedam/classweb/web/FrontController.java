@@ -21,6 +21,8 @@ import co.yedam.classweb.command.ClassInsert;
 import co.yedam.classweb.command.ClassInsertForm;
 import co.yedam.classweb.command.ClassList;
 import co.yedam.classweb.command.ClassSelect;
+import co.yedam.classweb.command.ClassUpdate;
+import co.yedam.classweb.command.ClassUpdateForm;
 import co.yedam.classweb.command.DeleteBoard;
 import co.yedam.classweb.command.Home;
 import co.yedam.classweb.command.InsertBoard;
@@ -94,6 +96,8 @@ public class FrontController extends HttpServlet {
 		// 강좌 등록, 수정, 삭제
 		map.put("/classInsertForm.do", new ClassInsertForm());
 		map.put("/classInsert.do", new ClassInsert());
+		map.put("/classUpdateForm.do", new ClassUpdateForm());
+		map.put("/classUpdate.do", new ClassUpdate());
 
 	}
 

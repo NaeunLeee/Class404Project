@@ -25,36 +25,18 @@ public class ClassApplyConfirm implements Command {
 		
 		int n = clDao.classApply(clid, id);
 		
+		String message = "";
+		
 		if (n == 404) {
-			page = "home/classMaxError";
+			message = "여석이 없습니다.";
 		} else if (n!=0 && n!=404) {
-			page = "home/classApplySuccess";
+			message = "수강신청에 성공하였습니다!";
 		} else {
-			page = "home/classApplyFail";
+			message = "수강신청에 실패하였습니다.";
 		}
 		
-		
-//		int n1 = clDao.classApply(clid);
-//		
-//		
-//		if (n1 == 404) {
-//			page = "home/classMaxError";
-//			
-//		} else if (n1 != 0 && n1 != 404) {
-//			int n2 = memDao.memberApply(clid, id);
-//			clDao.classRefresh();
-//			
-//			if (n2 != 0) {
-//				page = "home/classApplySuccess";
-//			} else {
-//				page = "home/classApplyFail";
-//			}
-//			
-//		} else {
-//			page = "home/classApplyFail";
-//		}
-//		
-		return page;
+		request.setAttribute("message", message);
+		return "home/classApplyMessage";
 	}
 
 }

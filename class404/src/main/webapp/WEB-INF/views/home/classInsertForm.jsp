@@ -27,8 +27,9 @@
 				<label for="clMax">최대인원</label> <input type="number" id="clMax"
 					name="clMax" placeholder value required>
 			</div>
+			<br>
 			<div>
-				<button type="submit">회원가입</button>
+				<button type="submit">등 록</button>
 			</div>
 		</form>
 	</div>

@@ -1,7 +1,6 @@
 package co.yedam.classweb.command;
 
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,12 +19,11 @@ public class ClassInsert implements Command {
 		ClassService dao = new ClassServiceImpl();
 		ClassVO vo = new ClassVO();
 		HttpSession session = request.getSession();
-		
-	
+        
 		vo.setClTeacher((String)session.getAttribute("name"));
 		vo.setClName(request.getParameter("clName"));
-		vo.setClDate(Date.valueOf(request.getParameter("clDate")));
 		vo.setClPlace(request.getParameter("clPlace"));
+		vo.setClDate(Date.valueOf(request.getParameter("clDate")));
 		vo.setClMax(Integer.valueOf(request.getParameter("clMax")));
 		
 		int n = dao.classInsert(vo);
@@ -36,6 +34,8 @@ public class ClassInsert implements Command {
 		} else {
 			message = "등록에 실패했습니다.";
 		}
+		
+		request.setAttribute("message", message);
 		
 		return "home/classInsertMessage";
 	}

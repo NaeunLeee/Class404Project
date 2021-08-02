@@ -45,7 +45,8 @@
 						<li class="listFont"><a href="memberManagement.do">회원관리</a></li>
 					</c:if>					
 					<c:if test="${ author == 'TEACHER' }">					
-						<li class="listFont"><a href="classInsert.do">강좌등록</a></li>
+						<li class="listFont"><a href="classInsertForm.do">강좌등록</a></li>
+						<li class="listFont"><a href="classUpdateForm.do">강좌관리</a></li>
 					</c:if>					
 				</ul>
 			</nav>

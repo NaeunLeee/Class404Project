@@ -151,8 +151,6 @@ public class ClassServiceImpl implements ClassService {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			close();
 		}
 		
 	}
