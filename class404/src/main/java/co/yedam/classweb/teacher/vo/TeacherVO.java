@@ -1,5 +1,7 @@
 package co.yedam.classweb.teacher.vo;
 
+import java.sql.Date;
+
 public class TeacherVO {
 	
 	private String id;
@@ -7,6 +9,7 @@ public class TeacherVO {
 	private String license;
 	private String career;
 	private String field;
+	private Date tDate;
 	
 	
 	public TeacherVO() {}
@@ -59,6 +62,16 @@ public class TeacherVO {
 
 	public void setField(String field) {
 		this.field = field;
+	}
+
+
+	public Date gettDate() {
+		return tDate;
+	}
+
+
+	public void settDate(Date tDate) {
+		this.tDate = tDate;
 	}
 	
 	

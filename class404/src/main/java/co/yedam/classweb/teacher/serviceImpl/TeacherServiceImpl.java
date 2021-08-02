@@ -37,6 +37,7 @@ public class TeacherServiceImpl implements TeacherService {
 				vo.setLicense(rs.getString("license"));
 				vo.setCareer(rs.getString("career"));
 				vo.setField(rs.getString("field"));
+				vo.settDate(rs.getDate("tdate"));
 				list.add(vo);
 			}
 		} catch (SQLException e) {

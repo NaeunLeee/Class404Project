@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,26 +20,23 @@
 				<section>
 					<h3 align="left">강사신청</h3>
 					<table border="1">
-				<tr>
-					<th>아이디</th>
-					<th>강사이름</th>
-					<th>자격증</th>
-					<th>경력사항</th>
-					<th>강좌분야</th>
-				</tr>
-				<c:forEach var="list" items="${list}">
-					<tr onmouseover="this.style.background='lightpink'" 
-						onmouseout="this.style.background='white'"
-						onclick="getRecord('${list.id}')">
-						<td>${list.id}</td>
-						<td>${list.name}</td>
-						
-					</tr>
-				</c:forEach>
-			</table>
-					
-
-					
+						<tr>
+							<th>아이디</th>
+							<th>강사이름</th>
+							<th>강좌분야</th>
+							<th>신청일</th>
+						</tr>
+						<c:forEach var="list" items="${list}">
+							<tr onmouseover="this.style.background='#f2f2f2'"
+								onmouseout="this.style.background='white'"
+								onclick="getRecord('${list.id}')">
+								<td>${list.id}</td>
+								<td>${list.name}</td>
+								<td>${list.field}</td>
+								<td>${list.tDate}</td>
+							</tr>
+						</c:forEach>
+					</table>
 
 				</section>
 
