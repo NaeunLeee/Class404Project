@@ -33,7 +33,7 @@
 				<td>${list.age}</td>
 				<td>${list.hobby}</td>
 				<td>${list.author}</td>
-				<td><button onclick="getRecord('${list.id}')">권한수정</button></td>
+				<td><button onclick="getRecord('${list.id}')">수정</button></td>
 			</tr>
 			</c:forEach>
 		</table>

@@ -81,7 +81,35 @@ public class MemberServiceImpl implements MemberService {
 
 		return vo;
 	}
-
+	
+	// 아이디로 회원 한명 조회
+	public MemberVO memSelectById(String id) {
+		MemberVO vo = new MemberVO();
+		String sql = "select * from member where id = ?";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			
+			while (rs.next()) {
+				vo = new MemberVO();
+				vo.setId(rs.getString("id"));
+				vo.setName(rs.getString("name"));
+				vo.setAge(rs.getInt("age"));
+				vo.setAuthor(rs.getString("author"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return vo;
+	}
+	
 	private String classSelect(int clid) {
 		String sql= "select clname from class where clid = ?";
 		String clName = "";
@@ -193,6 +221,30 @@ public class MemberServiceImpl implements MemberService {
 		return n;
 
 	}
+	
+	// 관리자의 회원 정보 수정 
+	public int memUpdateByAdmin(String id, MemberVO vo) {
+		int n = 0;
+		String sql = "update member set id = ?, name = ?, age = ?, author = ? where id = ?";
+		
+		try {
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getId());
+			psmt.setString(2, vo.getName());
+			psmt.setInt(3, vo.getAge());
+			psmt.setString(4, vo.getAuthor());
+			psmt.setString(5, id);
+			n = psmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		return n;
+	}
+	
 	
 	public int memberAuthorUpdate(MemberVO vo) {
 		String sql = "update member set author= 'TEACHER' where id = ? and name = ?";

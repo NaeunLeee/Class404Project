@@ -1,5 +1,8 @@
 package co.yedam.classweb.command;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -8,21 +11,17 @@ import co.yedam.classweb.member.service.MemberService;
 import co.yedam.classweb.member.serviceImpl.MemberServiceImpl;
 import co.yedam.classweb.member.vo.MemberVO;
 
-public class MemberUpdate implements Command {
+public class MemberList implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// 회원 정보를 실제로 수정하여 커밋하는 클래스
+		// 회원 리스트 조회
 		MemberService dao = new MemberServiceImpl();
-		MemberVO vo = new MemberVO();
+		List<MemberVO> list = new ArrayList<MemberVO>();
+		list = dao.memberSelectList();
+		request.setAttribute("list", list);
 		
-		String message = "";
-		String id = (String)request.getAttribute("id");
-		
-		
-		
-		
-		return "home/memberUpdate";
+		return "home/memberList";
 	}
 
 }
