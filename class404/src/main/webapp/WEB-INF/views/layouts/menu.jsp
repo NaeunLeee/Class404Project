@@ -17,8 +17,8 @@
 
 			<!-- Search -->
 			<section id="search" class="alt">
-				<form method="post" action="#">
-					<input type="text" name="query" id="query" placeholder="Search" />
+				<form method="post" action="classList.do">
+					<input type="text" name="query" id="query" placeholder="Class Search" />
 				</form>
 			</section>
 
@@ -71,7 +71,7 @@
 			<!-- Footer -->
 			<footer id="footer">
 				<p class="copyright">
-					&copy; Untitled. All rights reserved.
+					
 				</p>
 			</footer>
 

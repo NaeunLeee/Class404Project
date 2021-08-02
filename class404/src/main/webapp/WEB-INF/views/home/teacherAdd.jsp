@@ -17,10 +17,10 @@
 					<tr>
 						<th width="100" >아이디</th>
 						<td width="70" ><input type="text" id="id"
-							name="id" required="required" placeholder="아이디입력"></td>
+							name="id" required="required" value="${id}"></td>
 						<th width="70">강사이름</th>
 						<td width="150"><input type="text" id="name"
-							name="name" required="required" placeholder="가입시 이름을 입력하세요"></td>
+							name="name" required="required" value="${name}"></td>
 						<th width="70" >강좌분야</th>
 						<td width="100"><input type="text" id="field"
 							name="field" required="required"></td>

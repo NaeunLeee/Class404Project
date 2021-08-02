@@ -13,20 +13,20 @@
 		<form id="frm" name="frm" action="signup.do" method="post">
 			<div>
 				<label for="id">아 이 디</label> <input type="text" id="id" name="id"
-					placeholder value required>
+					placeholder="아이디를 입력하세요" required>
 			</div>
 			<div>
 				<label for="password">비밀번호</label> <input type="password"
-					id="password" name="password" placeholder value required>
+					id="password" name="password" placeholder="비밀번호를 입력하세요" required>
 			</div>
 			<div>
 				<label for="name">이 름</label> <input type="text" id="name"
-					name="name" placeholder value required>
+					name="name" placeholder="이름를 입력하세요" required>
 			</div>
 			<div>
 				<label for="birth">생년월일</label> <input type="date"
 					value="1990-01-01" min="1920-01-01" max="2020-12-31" id="birth"
-					name="birth" placeholder value required>
+					name="birth" required>
 			</div>
 			<!-- 
 			<div>
@@ -42,10 +42,13 @@
 			<br/>
 			관심분야
 			<select id ="hobbies" name="hobbies"> 
-				<option value="a" selected="selected">A</option>
-				<option value="b">B</option>
-				<option value="c">C</option>
-				<option value="d">D</option>
+				<option value="베이킹" selected="selected">베이킹</option>
+				<option value="디자인/공예">디자인/공예</option>
+				<option value="컴퓨터/공학">컴퓨터/공학</option>
+				<option value="여행">여행</option>
+				<option value="요리">요리</option>
+				<option value="인테리어/소품">인테리어/소품</option>
+				<option value="언어">언어</option>
 			</select> <br>
 			<div>
 				<button type="submit" >회원가입</button>
