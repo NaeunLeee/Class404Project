@@ -36,7 +36,9 @@ import co.yedam.classweb.command.MyPageError;
 import co.yedam.classweb.command.MyPageUpdate;
 import co.yedam.classweb.command.Signup;
 import co.yedam.classweb.command.SignupForm;
+import co.yedam.classweb.command.TeacherInsert;
 import co.yedam.classweb.command.TeacherList;
+import co.yedam.classweb.command.TeacherSelect;
 import co.yedam.classweb.command.Test01;
 import co.yedam.classweb.command.UpdateBoard;
 import co.yedam.classweb.common.Command;
@@ -92,6 +94,8 @@ public class FrontController extends HttpServlet {
 		
 		// 강사신청
 		map.put("/teacherList.do", new TeacherList());
+		map.put("/teacherSelect.do", new TeacherSelect());
+		map.put("/teacherInsert.do", new TeacherInsert());
 		
 		// 강좌 등록, 수정, 삭제
 		map.put("/classInsertForm.do", new ClassInsertForm());

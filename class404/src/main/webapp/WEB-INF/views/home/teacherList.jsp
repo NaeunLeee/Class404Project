@@ -7,14 +7,13 @@
 <meta charset="UTF-8">
 <script>
 	function getRecord(n) {
-		frm.bId.value = n;
+		frm.id.value = n;
 		frm.submit();
 	}
 </script>
 </head>
 <body>
 <body>
-
 	<h4>강사신청</h4>
 	<div>
 		<table>
@@ -35,6 +34,11 @@
 				</tr>
 			</c:forEach>
 		</table>
+		<div>
+			<form id="frm" action="teacherSelect.do" method="post">
+				<input type="hidden" id="id" name="id">
+			</form>
+		</div>
 	</div>
 </body>
 </html>
