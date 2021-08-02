@@ -19,8 +19,8 @@
 <body>
 	<!-- Header -->
 	<header id="header">
-		<a href="home.do" class="logo"><strong>&nbsp;&nbsp;Class 404</strong></a>
-		<a href="home.do">
+		<a href="home.do" class="logo"><strong>&nbsp;&nbsp;Home</strong></a>
+		<a style="text-decoration-line: none;" href="home.do">
 		<img class="classLogo" src="images/classlogo.jpg" alt="AVATAR">
 		</a>
 		<ul class="icons">
@@ -34,7 +34,6 @@
 			<li><a href="https://twitter.com/?lang=ko" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 			<li><a href="https://ko-kr.facebook.com/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 			<li><a href="https://www.instagram.com/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
 		</ul>
 	</header>
 </body>

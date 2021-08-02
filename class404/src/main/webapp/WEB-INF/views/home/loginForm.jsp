@@ -46,7 +46,7 @@
 				<form class="login100-form validate-form" action="login.do" method="post">
 					<span class="login100-form-title p-b-70"> 환영합니다! </span> <span
 						class="login100-form-avatar"> <img
-						src="images/class404_logo.png" alt="AVATAR">
+						src="images/logo_transparent2.png" alt="AVATAR">
 					</span>
 
 					<div class="wrap-input100 validate-input m-t-85 m-b-35"

@@ -19,6 +19,7 @@
 </head>
 <body>
 	<div align="center">
+	<br>
 		<div><h3>${ board.bTitle }</h3></div>
 		<div>
 			<table >
