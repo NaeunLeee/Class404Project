@@ -12,6 +12,9 @@ public interface ClassService {
 	// 강의 한건 조회
 	ClassVO classSelectOne(int no);
 	
+	// 강사 이름으로 조회
+	ClassVO clSelectByTeacher(String clName);
+	
 	// 수강 신청 
 	int classApply(int clid, String id);
 	
