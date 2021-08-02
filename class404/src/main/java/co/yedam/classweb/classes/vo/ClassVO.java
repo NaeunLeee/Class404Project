@@ -11,6 +11,7 @@ public class ClassVO {
 	private String clPlace;
 	private int clMax;
 	private int clStudent;
+	private String clDetail;
 	
 	
 	public ClassVO() {}
@@ -84,6 +85,17 @@ public class ClassVO {
 	public void setClStudent(int clStudent) {
 		this.clStudent = clStudent;
 	}
+
+
+	public String getClDetail() {
+		return clDetail;
+	}
+
+
+	public void setClDetail(String clDetail) {
+		this.clDetail = clDetail;
+	}
+	
 	
 	
 }

@@ -23,7 +23,7 @@ public class ClassServiceImpl implements ClassService {
 	public List<ClassVO> classSelectList() {
 		List<ClassVO> list = new ArrayList<ClassVO>();
 		ClassVO vo;
-		String sql = "select * from class";
+		String sql = "select * from class order by clid asc";
 
 		try {
 			conn = dataSource.getConnection();
@@ -69,6 +69,7 @@ public class ClassServiceImpl implements ClassService {
 				vo.setClPlace(rs.getString("clplace"));
 				vo.setClMax(rs.getInt("clmax"));
 				vo.setClStudent(rs.getInt("clstudent"));
+				vo.setClDetail(rs.getString("cldetail"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
