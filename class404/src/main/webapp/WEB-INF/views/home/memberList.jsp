@@ -24,7 +24,6 @@
 					<th>나 이</th>
 					<th>권 한</th>
 					<th></th>
-					<th></th>
 				</tr>
 				<c:forEach var="list" items="${list}">
 					<tr>

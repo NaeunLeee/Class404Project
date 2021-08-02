@@ -20,7 +20,7 @@
 	<!-- Header -->
 	<header id="header">
 		<a href="home.do" class="logo"><strong>&nbsp;&nbsp;Class 404</strong></a>
-			<!-- 	<img class="cl_logo" width="50" height="50" src="images/class404_logo.png" alt="AVATAR"> -->
+		<img class="classLogo" src="images/classlogo.jpg" alt="AVATAR">
 		<ul class="icons">
 			<c:if test="${ empty name }">
 				<li><a href="loginForm.do" class="brands"><span class="label">로그인</span></a></li>
