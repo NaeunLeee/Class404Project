@@ -33,17 +33,13 @@
 				<td>${list.age}</td>
 				<td>${list.hobby}</td>
 				<td>${list.author}</td>
-				<td><button onclick="getRecord('${list.name}')">권한수정</button></td>
+				<td><button onclick="getRecord('${list.id}')">권한수정</button></td>
 			</tr>
 			</c:forEach>
 		</table>
 		<form id="frm" action="memberUpdate.do" method="post">
-				<input type="hidden" id="name" name="name">
-			</form>
-		<div align="right">
-			<input type="text" size="50">
-			<button>검색</button>
-		</div>
+			<input type="hidden" id="id" name="id">
+		</form>
 	</div>
 </div>
 </body>

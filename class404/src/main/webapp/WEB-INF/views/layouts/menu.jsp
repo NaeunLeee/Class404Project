@@ -41,9 +41,9 @@
 					<li class="listFont"><a href="classApply.do">수강신청</a></li>
 					<li class="listFont"><a href="teacherList.do">강사신청</a></li>
 					</c:if>
-					<c:if test="${ author == 'ADMIN' }">					
+<!-- 					<c:if test="${ author == 'ADMIN' }">					
 						<li class="listFont"><a href="memberManagement.do">회원관리</a></li>
-					</c:if>					
+					</c:if>  -->					
 					<c:if test="${ author == 'TEACHER' }">					
 						<li class="listFont"><a href="classInsertForm.do">강좌등록</a></li>
 						<li class="listFont"><a href="classUpdateForm.do">강좌관리</a></li>
