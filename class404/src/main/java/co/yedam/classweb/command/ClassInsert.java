@@ -25,6 +25,7 @@ public class ClassInsert implements Command {
 		vo.setClPlace(request.getParameter("clPlace"));
 		vo.setClDate(Date.valueOf(request.getParameter("clDate")));
 		vo.setClMax(Integer.valueOf(request.getParameter("clMax")));
+		vo.setClDetail(request.getParameter("clDetail"));
 		
 		int n = dao.classInsert(vo);
 		String message = "";

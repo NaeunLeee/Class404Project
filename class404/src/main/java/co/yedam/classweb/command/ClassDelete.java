@@ -33,7 +33,7 @@ public class ClassDelete implements Command {
 		
 		request.setAttribute("message", message);
 		
-		return "home/classUpdateMessage";
+		return "home/deleteMessage";
 	}
 
 }

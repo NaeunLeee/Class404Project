@@ -35,6 +35,10 @@
 						<td><input type="number" id="clMax" name="clMax" placeholder
 							value required></td>
 					</tr>
+					<tr>
+						<th>설 명</th>
+						<td><textarea rows="10" cols="110" id="clDetail" name="clDetail"></textarea></td>
+					</tr>
 				</table>
 			</div>
 			<div align="right">

@@ -36,13 +36,15 @@
 					<tr>
 						<th>관심분야</th>
 						<td><select id="hobbies" name="hobbies">
-								<option value="베이킹" selected="selected">베이킹</option>
+								<option value="" selected="selected">선택</option>
+								<option value="베이킹">베이킹</option>
 								<option value="디자인/공예">디자인/공예</option>
 								<option value="컴퓨터/공학">컴퓨터/공학</option>
 								<option value="여행">여행</option>
 								<option value="요리">요리</option>
 								<option value="인테리어/소품">인테리어/소품</option>
 								<option value="언어">언어</option>
+								<option value="기타">기타</option>
 						</select></td>
 					</tr>
 				</table>

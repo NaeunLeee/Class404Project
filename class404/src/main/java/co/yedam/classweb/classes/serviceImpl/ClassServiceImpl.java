@@ -190,8 +190,8 @@ public class ClassServiceImpl implements ClassService {
 	// 클래스 등록
 	public int classInsert(ClassVO vo) {
 		int n = 0;
-		String sql = "insert into class (clid, clname, clteacher, cldate, clplace, clmax, clstudent) "
-				+ " values (CL_SEQ.nextval, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into class (clid, clname, clteacher, cldate, clplace, clmax, clstudent, cldetail) "
+				+ " values (CL_SEQ.nextval, ?, ?, ?, ?, ?, ?, ?)";
 
 		try {
 			conn = dataSource.getConnection();
@@ -202,6 +202,7 @@ public class ClassServiceImpl implements ClassService {
 			psmt.setString(4, vo.getClPlace());
 			psmt.setInt(5, vo.getClMax());
 			psmt.setInt(6, vo.getClStudent());
+			psmt.setString(7, vo.getClDetail());
 			n = psmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
