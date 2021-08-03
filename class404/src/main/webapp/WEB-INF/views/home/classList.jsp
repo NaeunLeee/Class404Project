@@ -19,7 +19,7 @@
 	<h2>클래스 404</h2>
 	</div>
 		<div>
-			<table border="1">
+			<table border="1" class="bodys">
 			<thead>
 				<tr >
 					<th>강좌번호</th>
