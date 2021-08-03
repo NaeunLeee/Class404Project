@@ -16,6 +16,7 @@ import co.yedam.classweb.command.BoardList;
 import co.yedam.classweb.command.BoardSelect;
 import co.yedam.classweb.command.BoardUpdateForm;
 import co.yedam.classweb.command.ClassAdminDelete;
+import co.yedam.classweb.command.ClassAdminList;
 import co.yedam.classweb.command.ClassAdminSelect;
 import co.yedam.classweb.command.ClassAdminUpdate;
 import co.yedam.classweb.command.ClassApply;
@@ -25,7 +26,6 @@ import co.yedam.classweb.command.ClassDelete;
 import co.yedam.classweb.command.ClassInsert;
 import co.yedam.classweb.command.ClassInsertForm;
 import co.yedam.classweb.command.ClassList;
-import co.yedam.classweb.command.ClassManage;
 import co.yedam.classweb.command.ClassSelect;
 import co.yedam.classweb.command.ClassUpdate;
 import co.yedam.classweb.command.ClassUpdateForm;
@@ -109,7 +109,7 @@ public class FrontController extends HttpServlet {
 		map.put("/teacherAdd.do", new TeacherAdd());
 		
 		// 관리자 강좌관리
-		map.put("/classManage.do", new ClassManage());
+		map.put("/classAdminList.do", new ClassAdminList());
 		map.put("/classAdminSelect.do", new ClassAdminSelect());
 		map.put("/classAdminUpdate.do", new ClassAdminUpdate());
 		map.put("/classAdminDelete.do", new ClassAdminDelete());

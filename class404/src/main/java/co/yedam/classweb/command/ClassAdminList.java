@@ -11,7 +11,7 @@ import co.yedam.classweb.classes.serviceImpl.ClassServiceImpl;
 import co.yedam.classweb.classes.vo.ClassVO;
 import co.yedam.classweb.common.Command;
 
-public class ClassManage implements Command {
+public class ClassAdminList implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,8 +45,10 @@
 			</table>
 		</div>
 		<div>
+		<c:if test="${ author == 'USER' }">
 			<button onclick="getId('${list.clId}')">수강신청</button>
 			&nbsp;&nbsp;
+			</c:if>
 			<button onclick="location.href='classList.do'">목록</button>
 			&nbsp;&nbsp;
 			<button onclick="location.href='home.do'">홈</button>
