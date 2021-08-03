@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
+<title>회원가입 상태 메세지</title>
 </head>
 <body>
-회원가입을 완료했습니다!
-<a href="loginForm.do">로그인</a>&nbsp;&nbsp;
-<a href="home.do">홈으로</a>
+	<div align="center">
+		<h3>${message}</h3>
+		<a href="home.do">홈 가기</a>
+	</div>
 </body>
 </html>

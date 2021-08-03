@@ -43,7 +43,7 @@ public class ClassUpdate implements Command {
 		
 		request.setAttribute("message", message);		
 		
-		return "home/classUpdateMessage";
+		return "home/updateMessage";
 	}
 
 }
