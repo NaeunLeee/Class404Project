@@ -29,14 +29,18 @@ public class ClassApplyConfirm implements Command {
 		
 		if (n == 404) {
 			message = "여석이 없습니다.";
+			page = "home/classApplyMessage";
 		} else if (n!=0 && n!=404) {
 			message = "수강신청에 성공하였습니다!";
+			page = "home/classApplySuccess";
 		} else {
 			message = "수강신청에 실패하였습니다.";
+			page = "home/classApplyMessage";
 		}
 		
 		request.setAttribute("message", message);
-		return "home/classApplyMessage";
+		
+		return page;
 	}
 
 }

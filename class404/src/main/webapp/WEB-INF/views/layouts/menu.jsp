@@ -29,12 +29,12 @@
 				</header>
 				<ul>
 					<li class="listFont"><a href="home.do">홈</a></li>
-					<c:if test="${ empty name }">
+					<!--<c:if test="${ empty name }">
 					<li class="listFont"><a href="loginForm.do">로그인/회원가입</a></li>
 					</c:if>
 					<c:if test="${ not empty name }">
 					<li class="listFont"><a href="logout.do">로그아웃</a></li>
-					</c:if>
+					</c:if> -->
 					<li class="listFont"><a href="boardList.do">공지사항</a></li>
 					<li class="listFont"><a href="classList.do">클래스</a></li>
 					<c:if test="${ not empty name }">
