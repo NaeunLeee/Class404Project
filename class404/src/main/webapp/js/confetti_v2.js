@@ -56,8 +56,8 @@
 
     $(document).ready(function () {
         SetGlobals();
-        InitializeButton();
-        //InitializeConfetti();
+        //InitializeButton();
+        InitializeConfetti();
 
         $(window).resize(function () {
             W = window.innerWidth;

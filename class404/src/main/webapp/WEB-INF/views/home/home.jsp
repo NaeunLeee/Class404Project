@@ -11,19 +11,17 @@
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+<script src="js/confetti_v2.js"></script>
 
 <style>
 	canvas{z-index:10;pointer-events: none;position: fixed;top: 0;transform: scale(1.1);}
 </style>
-
 </head>
 <body class="is-preload">
-<script src="js/confetti_v2.js"></script>
-<div class="buttonContainer">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="canvasBtn" id="stopButton">Stop Confetti</button>
-	&nbsp;<button class="canvasBtn" id="startButton">Drop Confetti</button>	
+<div class="buttonContainer" align="right">
+	<button class="canvasBtn" id="stopButton">Stop Confetti</button>
+	&nbsp;<button class="canvasBtn" id="startButton">Drop Confetti</button>
 </div>
-
 <canvas id="canvas"></canvas>
 
 	<!-- Wrapper -->
@@ -171,23 +169,6 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	
-	<script>
 	
-
-
-$(document).ready(function(){  
-  //티스토리 공감버튼 이벤트
-  function reAction(){
-  	$("#startButton").trigger("click");
-  	setTimeout(function(){
-  		$("#stopButton").trigger("click");
-  	},100);
-  }
-  
-  $(".uoc-icon").on('click', function(){
-      reAction();
-  }); 
-});
-</script>
 	</body>
 </html>

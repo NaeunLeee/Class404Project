@@ -32,17 +32,19 @@ public class Signup implements Command {
 		vo.setHobby(request.getParameter("hobbies"));
 		
 		int n = dao.memberInsert(vo);
+		String page = "";
+		
 		String message = "";
 		
 		if (n != 0) {
-			message = "회원가입을 완료했습니다! 환영합니다.";
+			page = "home/signupSuccess";
 		} else {
-			message = "회원가입에 실패했습니다. 다시 실행해주세요.";
+			page = "home/signupFail";
 		}
 		
-		request.setAttribute("message", message);
+		//request.setAttribute("message", message);
 		
-		return "home/signupMsg";
+		return page;
 	}
 
 }
