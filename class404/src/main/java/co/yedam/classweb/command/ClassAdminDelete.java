@@ -15,6 +15,7 @@ public class ClassAdminDelete implements Command {
 		// 관리자가 클래스를 삭제
 		ClassService dao = new ClassServiceImpl();
 		
+		System.out.println(request.getParameter("clId"));
 		int clId = Integer.valueOf(request.getParameter("clId"));
 		int n = dao.classDelete(clId);
 		String message = "";

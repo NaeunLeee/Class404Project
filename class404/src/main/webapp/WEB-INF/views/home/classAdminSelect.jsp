@@ -5,6 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>강좌 수정 및 삭제</title>
+<script>
+	function get(n){
+		frmm.clId.value = n;
+		frmm.submit();
+	}
+</script>
+
 </head>
 
 <body>
@@ -37,16 +44,18 @@
 					</tr>
 				</table>
 				<div>
+					<input type="hidden" id="clId" name="clId" value="${list.clId}">
+				</div>
+				<div>
 					<button type="submit">수 정</button>
 					&nbsp;
-					<button type="button" onclick="location.href='classAdminDelete.do'">삭
-						제</button>
+					<button type="button" onclick="get('${list.clId}')">삭 제</button>
 					&nbsp;
 					<button type="button" onclick="location.href='classAdminList.do'">목 록</button>
 				</div>
-				<div>
-					<input type="hidden" id="clId" name="clId" value="${list.clId}">
-				</div>
+			</form>
+			<form id="frmm" name ="frmm" action="classAdminDelete.do" method="post">
+				<input type="hidden" id="clId" name="clId" >
 			</form>
 		</div>
 	</div>
