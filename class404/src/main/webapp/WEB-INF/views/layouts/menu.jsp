@@ -45,6 +45,7 @@
 					</c:if>
  					<c:if test="${ author == 'ADMIN' }">					
 						<li class="listFont"><a href="memberList.do">회원관리</a></li>
+						<li class="listFont"><a href="classManage.do">강좌관리</a></li>
 					</c:if>					
 					<c:if test="${ author == 'TEACHER' }">					
 						<li class="listFont"><a href="classInsertForm.do">강좌등록</a></li>

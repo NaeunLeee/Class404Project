@@ -15,6 +15,9 @@ import co.yedam.classweb.command.BoardAdd;
 import co.yedam.classweb.command.BoardList;
 import co.yedam.classweb.command.BoardSelect;
 import co.yedam.classweb.command.BoardUpdateForm;
+import co.yedam.classweb.command.ClassAdminDelete;
+import co.yedam.classweb.command.ClassAdminSelect;
+import co.yedam.classweb.command.ClassAdminUpdate;
 import co.yedam.classweb.command.ClassApply;
 import co.yedam.classweb.command.ClassApplyConfirm;
 import co.yedam.classweb.command.ClassApplyForm;
@@ -22,6 +25,7 @@ import co.yedam.classweb.command.ClassDelete;
 import co.yedam.classweb.command.ClassInsert;
 import co.yedam.classweb.command.ClassInsertForm;
 import co.yedam.classweb.command.ClassList;
+import co.yedam.classweb.command.ClassManage;
 import co.yedam.classweb.command.ClassSelect;
 import co.yedam.classweb.command.ClassUpdate;
 import co.yedam.classweb.command.ClassUpdateForm;
@@ -96,7 +100,6 @@ public class FrontController extends HttpServlet {
 		map.put("/memberUpdate.do", new MemberUpdate());
 		map.put("/memberUpdateForm.do", new MemberUpdateForm());
 		map.put("/memberDelete.do", new MemberDelete());
-		
 		map.put("/authorUpdate.do", new AuthorUpdate());
 		
 		// 강사신청
@@ -105,7 +108,13 @@ public class FrontController extends HttpServlet {
 		map.put("/teacherInsert.do", new TeacherInsert());
 		map.put("/teacherAdd.do", new TeacherAdd());
 		
-		// 강좌 등록, 수정, 삭제
+		// 관리자 강좌관리
+		map.put("/classManage.do", new ClassManage());
+		map.put("/classAdminSelect.do", new ClassAdminSelect());
+		map.put("/classAdminUpdate.do", new ClassAdminUpdate());
+		map.put("/classAdminDelete.do", new ClassAdminDelete());
+		
+		// 강사 강좌관리
 		map.put("/classInsertForm.do", new ClassInsertForm());
 		map.put("/classInsert.do", new ClassInsert());
 		map.put("/classUpdateForm.do", new ClassUpdateForm());
