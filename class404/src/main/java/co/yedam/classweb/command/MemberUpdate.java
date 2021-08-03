@@ -34,7 +34,7 @@ public class MemberUpdate implements Command {
 		
 		request.setAttribute("message", message);
 		
-		return "home/memUpdateMessage";
+		return "home/updateMessage";
 	}
 
 }

@@ -15,7 +15,6 @@ public class MyPageUpdate implements Command {
 		// TODO 마이페이지 수정업데이트 
 		MemberService dao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
-		String page = "";
 		
 		vo.setId(request.getParameter("id"));
 		vo.setPassword(request.getParameter("password"));
@@ -34,7 +33,7 @@ public class MyPageUpdate implements Command {
 		
 		request.setAttribute("message", message);
 		
-		return "home/myPageUpdateMsg";
+		return "home/updateMessage";
 	}
 
 }

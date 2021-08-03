@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>마이페이지 수정 상태</title>
+<title>수정 상태</title>
 </head>
 <body>
 	<div align="center">

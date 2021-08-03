@@ -12,7 +12,7 @@ public class UpdateBoard implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO 수정폼
+		// 게시판을 실제로 수정하여 커밋하는 클래스
 		BoardService dao = new BoardServiceImpl();
 		BoardVO vo = new BoardVO();
 		
@@ -21,14 +21,17 @@ public class UpdateBoard implements Command {
 		vo.setbId(Integer.valueOf(request.getParameter("bId")));
 		int n = dao.boardUpdate(vo);
 		
-		String page="";
+		String message = "";
+		
 		if (n != 0) {
-			page="boardList.do";
+			message = "수정에 성공했습니다!";
 		}else {
-			page="home/myPageError";
+			message = "수정에 실패했습니다.";
 		}
 		
-		return page;
+		request.setAttribute("message", message);
+		
+		return "home/updateMessage";
 	}
 
 }
