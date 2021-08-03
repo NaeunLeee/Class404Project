@@ -20,7 +20,8 @@
 	</div>
 		<div>
 			<table border="1">
-				<tr>
+			<thead>
+				<tr >
 					<th>강좌번호</th>
 					<th>강좌</th>
 					<th>강사</th>
@@ -29,7 +30,7 @@
 					<th>장소</th>
 					<th>최대인원</th>
 					-->
-				</tr>
+				</tr></thead>
 				<c:forEach var="list" items="${list}">
 					<tr onmouseover="this.style.background='lightpink'" 
 						onmouseout="this.style.background='white'"

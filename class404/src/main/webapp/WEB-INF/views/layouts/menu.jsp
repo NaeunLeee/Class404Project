@@ -71,7 +71,6 @@
 			<!-- Footer -->
 			<footer id="footer">
 				<p class="copyright">
-					
 				</p>
 			</footer>
 
