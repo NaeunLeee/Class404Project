@@ -15,9 +15,10 @@
 </head>
 <body>
 	<div align="center">
+	<br>
 		<h3>회원 목록</h3>
 		<div>
-			<table>
+			<table class="bodys">
 				<tr>
 					<th>아이디</th>
 					<th>이 름</th>

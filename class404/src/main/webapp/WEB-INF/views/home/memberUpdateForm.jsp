@@ -12,24 +12,24 @@
 			<h3>회원 정보 수정</h3>
 		</div>
 		<form id="frm" name="frm" action="memberUpdate.do" method="post">
-			<table>
+			<table class="bodys">
 				<tr>
-					<th bgcolor="f2f2f2">아 이 디</th>
-					<td><input type="text" id="id" name="id" value="${member.id}"
+					<td bgcolor="#F9FAFB">아 이 디</td>
+					<td bgcolor="#fff"><input type="text" id="id" name="id" value="${member.id}"
 						placeholder value required></td>
 				</tr>
 				<tr>
-					<th bgcolor="f2f2f2">이 름</th>
+					<td bgcolor="#F9FAFB">이 름</td>
 					<td><input type="text" id="name" name="name"
 						value="${member.name}" placeholder value required></td>
 				</tr>
 				<tr>
-					<th bgcolor="f2f2f2">나 이</th>
-					<td><input type="text" id="age" name="age"
+					<td bgcolor="#F9FAFB" >나 이</td>
+					<td bgcolor="#fff"><input type="text" id="age" name="age"
 						value="${member.age}" placeholder value required></td>
 				</tr>
 				<tr>
-					<th bgcolor="f2f2f2">권 한</th>
+					<td bgcolor="#F9FAFB">권 한</td>
 					<td><select id="author" name="author">
 							<option value="USER" selected="selected">USER</option>
 							<option value="TEACHER">TEACHER</option>

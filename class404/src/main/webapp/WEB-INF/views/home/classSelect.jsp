@@ -18,7 +18,7 @@
 			<h3>강좌 상세보기</h3>
 		</div>
 		<div>
-			<table>
+			<table class="bodys">
 				<tr align="center">
 					<th width="100" bgcolor="f2f2f2">강좌번호</th>
 					<td width="70">${list.clId}</td>

@@ -13,7 +13,7 @@
 		</div>
 		<div>
 			<form id="frm" name="frm" action="teacherInsert.do" method="post">
-				<table>
+				<table class="bodys">
 					<tr>
 						<th width="100" >아이디</th>
 						<td width="70" ><input type="text" id="id"

@@ -18,7 +18,7 @@
 	<div align="center">
 		<div>
 
-			<table border="1">
+			<table border="1" class="bodys">
 				<tr>
 					<th>강좌 번호</th>
 					<th>강좌</th>

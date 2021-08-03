@@ -14,10 +14,11 @@
 </head>
 <body>
 <body>
-	<h4>강사신청</h4>
+<br><div align="center">
+	<h3>강사신청</h3>
 	<c:if test="${ author == 'ADMIN' }">
 	<div>
-		<table>
+		<table class="bodys">
 			<tr>
 				<th>아이디</th>
 				<th>강사이름</th>
@@ -45,6 +46,7 @@
 	<br>
 	<div>
 		<button type="button" onclick="location.href='teacherAdd.do'">신청등록</button>
+	</div>
 	</div>
 </body>
 </html>

@@ -13,24 +13,23 @@
 		</div>
 		<div>
 			<form id="frm" name="frm" action="classUpdate.do" method="post">
-				<table>
+				<table class="bodys">
 					<tr>
 						<th align="center" width="100" bgcolor="f2f2f2">강좌명</th>
 						<td width="70"><input type="text" id="clName" name="clName"
-							value="${list.clName}" placeholder value required></td>
+							value="${list.clName}" ></td>
 						<th align="center" width="100" bgcolor="f2f2f2">날 짜</th>
 						<td width="150"><input type="date" value="${list.clDate}"
 							min="2021-07-01" max="2021-12-31" id="clDate" name="clDate"
-							placeholder value required></td>
+							></td>
 					</tr>
 					<tr>
 						<th align="center" width="70" bgcolor="f2f2f2">장 소</th>
 						<td width="150" align="center"><input type="text"
-							id="clPlace" name="clPlace" value="${list.clPlace}" placeholder
-							value required></td>
+							id="clPlace" name="clPlace" value="${list.clPlace}" ></td>
 						<th align="center" width="70" bgcolor="f2f2f2">최대인원</th>
 						<td width="70"><input type="number" id="clMax" name="clMax"
-							value="${list.clMax}" placeholder value required></td>
+							value="${list.clMax}" ></td>
 					</tr>
 					<tr>
 						<td colspan="4"><textarea rows="5" cols="110" id="clDetail" name="clDetail">${list.clDetail}</textarea>
