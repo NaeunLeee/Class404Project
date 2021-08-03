@@ -2195,7 +2195,7 @@ button,
 #footer .copyright {
   color: #9fa3a6;
   font-size: 0.9em;
-  
+  margin : 0;
    }
   #footer .copyright a {
     color: inherit; }
