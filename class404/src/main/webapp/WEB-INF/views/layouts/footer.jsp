@@ -9,7 +9,7 @@
 <body>
 	<footer id="footer">
 		<p class="copyright" align="center">&copy; by Welcome Class404. All rights reserved.</p>
-		<p class="copyright" align="center">Making &nbsp;LeeNaeun KwonSumin </p>
+		<p class="copyright" align="center">Established by &nbsp;LeeNaeun KwonSumin </p>
 	</footer>
 </body>
 </html>

@@ -18,10 +18,10 @@
 
 </head>
 <body class="is-preload">
-<script src="https://tistory4.daumcdn.net/tistory/3134841/skin/images/confetti_v2.js"></script>
+<script src="js/confetti_v2.js"></script>
 <div class="buttonContainer">
-	<button class="canvasBtn" id="stopButton">Stop Confetti</button>
-	<button class="canvasBtn" id="startButton">Drop Confetti</button>	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="canvasBtn" id="stopButton">Stop Confetti</button>
+	&nbsp;<button class="canvasBtn" id="startButton">Drop Confetti</button>	
 </div>
 
 <canvas id="canvas"></canvas>
@@ -47,7 +47,7 @@
 							<h1>
 								배우며 함께 성장하는<br> Class 404 입니다
 							</h1>
-							<p>Making &nbsp;&nbsp; Lee naeun, Kwon sumin</p>
+							<p>Established by &nbsp;&nbsp; Lee naeun, Kwon sumin</p>
 						</header>
 						<p>클래스 404는 모든 사람이 사랑하는 일을 하며 살 수 있도록 세상을 바꾸고자 합니다.
 						다양한 콘텐츠로 자신만의 취미에 맞는 클래스를 선택하여 맞춤식 강좌를 들으실 수 있습니다.

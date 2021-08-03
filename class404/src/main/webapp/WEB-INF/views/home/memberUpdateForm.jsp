@@ -8,6 +8,9 @@
 </head>
 <body>
 	<div align="center">
+		<div>
+			<h3>회원 정보 수정</h3>
+		</div>
 		<form id="frm" name="frm" action="memberUpdate.do" method="post">
 			<table>
 				<tr>
