@@ -9,5 +9,6 @@
 <body>
 <h3>성공적으로 권한이 부여되었습니다!</h3>
 <a href = "teacherList.do">목록</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

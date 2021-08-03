@@ -9,5 +9,6 @@
 <body>
 수강신청 인원이 꽉 찼습니다.<br>
 <a href="home.do">홈으로</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
