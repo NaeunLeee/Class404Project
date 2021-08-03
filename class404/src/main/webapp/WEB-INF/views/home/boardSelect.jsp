@@ -36,7 +36,7 @@
 				<tr>
 					<th width="100" bgcolor="f2f2f2">내  용</th>
 					<td colspan="7">
-					<textarea rows="5" cols="110" disabled>${ board.bContent }</textarea></td>
+					<textarea rows="10" cols="110" disabled>${ board.bContent }</textarea></td>
 				</tr>
 			</table>
 		</div>
