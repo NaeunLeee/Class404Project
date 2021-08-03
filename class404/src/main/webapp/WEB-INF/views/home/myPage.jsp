@@ -18,48 +18,44 @@
 			<c:if test="${ not empty name }">
 				<form id="frm" name="frm" action="myPageUpdate.do" method="post">
 					<div>
-						<label for="id">아 이 디</label> <input type="text" id="id" name="id"
-							value="${member.id}" required="required">
+						<table>
+							<tr>
+								<th>아 이 디</th>
+								<td><input type="text" id="id" name="id"
+									value="${member.id}" required="required"></td>
+							</tr>
+							<tr>
+								<th>비밀번호</th>
+								<td><input type="password" id="password" name="password"
+									value="${member.password}" required="required"></td>
+							</tr>
+							<tr>
+								<th>이 름</th>
+								<td><input type="text" id="name" name="name"
+									value="${member.name}" required="required"></td>
+							</tr>
+							<tr>
+								<th>나 이</th>
+								<td><input type="text" id="age" name="age"
+									value="${member.age}" required="required"></td>
+							</tr>
+							<tr>
+								<th>권 한</th>
+								<td><input type="text" id="author" name="author"
+									value="${member.author}" required="required"
+									disabled="disabled"></td>
+							</tr>
+							<tr>
+								<th>수강신청한 강좌</th>
+								<td><input type="text" id="clId" name="clId"
+									value="${member.clName}" required="required"
+									disabled="disabled"></td>
+							</tr>
+						</table>
 					</div>
-					<br>
-					<div>
-						<label for="password">비밀번호</label> <input type="password"
-							id="password" name="password" value="${member.password}"
-							required="required">
-					</div>
-					<br>
-					<div>
-						<label for="name">이 름</label> <input type="text" id="name"
-							name="name" value="${member.name}" required="required">
-					</div>
-					<br>
-					<div>
-						<label for="age">나 이</label> <input type="text" id="age"
-							name="age" value="${member.age}" required="required">
-					</div>
-					<br>
-					<div>
-						<label for="age">권 한</label> <input type="text" id="author"
-							name="author" value="${member.author}" required="required" disabled="disabled">
-					</div>
-					<br>
-					<label for="clId">수강신청한 강좌</label> <input type="text" id="clId"
-						name="clId" value="${member.clName}" required="required"
-						disabled="disabled"> <br />
-					<!-- 
-					관심분야
-					<select id="hobbies" name="hobbies">
-						<option value="a" selected="selected">A</option>
-						<option value="b">B</option>
-						<option value="c">C</option>
-						<option value="d">D</option>
-					</select>
-					 -->
-					<br>
 					<div>
 						<button type="submit">수정</button>
 					</div>
-					
 				</form>
 			</c:if>
 		</div>
