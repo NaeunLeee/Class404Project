@@ -15,14 +15,14 @@
 </script>
 <body>
 	<div align="center">
+	<br>
 		<h2>공 지 사 항</h2>
-		<br>
 		<div>
 			<c:if test="${ empty name }">
 				<a href="loginForm.do">로그인/회원가입</a>
 			</c:if>
 			<c:if test="${ not empty name }">
-				<table>
+				<table class="bodys">
 					<tr>
 						<th>순번</th>
 						<th>작성자</th>

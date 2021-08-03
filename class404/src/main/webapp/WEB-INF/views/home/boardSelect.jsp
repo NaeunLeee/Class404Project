@@ -19,10 +19,10 @@
 </head>
 <body>
 	<div align="center">
-	<br>
+	<br><br>
 		<div><h3>${ board.bTitle }</h3></div>
 		<div>
-			<table >
+			<table class="bodys">
 				<tr>
 					<th width="100" bgcolor="f2f2f2">글번호</th>
 					<td width="70" align="center">${ board.bId } </td>
@@ -32,10 +32,6 @@
 					<td width="150" align="center">${ board.bDate }</td>
 					<th width="100" bgcolor="f2f2f2">조회수</th>
 					<td width="70" align="center">${ board.bHit }</td>
-				</tr>
-				<tr>
-					<th width="100" bgcolor="f2f2f2">글제목</th>
-					<td colspan="7">${ board.bTitle }</td>
 				</tr>
 				<tr>
 					<th width="100" bgcolor="f2f2f2">내  용</th>

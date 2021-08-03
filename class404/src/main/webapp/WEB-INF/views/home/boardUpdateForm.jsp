@@ -9,7 +9,8 @@
 <body>
 	<div align="center">
 		<div>
-			<h1>게시글 수정</h1>
+		<br>
+			<h3>게시글 수정</h3>
 		</div>
 		<div>
 			<form id="frm" name="frm" action="updateBoard.do" method="post">
@@ -26,12 +27,12 @@
 					</tr>
 					<tr>
 						<th width="100" bgcolor="f2f2f2">글제목</th>
-						<td colspan="7"><input type="text" id="bTitle" size="60"
+						<td colspan="6"><input type="text" id="bTitle" size="60"
 							name="bTitle" required="required" value="${ board.bTitle }"></td>
 					</tr>
 					<tr>
 						<th width="100" bgcolor="f2f2f2">내 용</th>
-						<td colspan="7"><textarea rows="5" cols="65" id="bContent"
+						<td colspan="6"><textarea rows="5" cols="65" id="bContent"
 								name="bContent">${ board.bContent }</textarea></td>
 						<td><input type="hidden" id="bId" name="bId"
 							value="${ board.bId }"></td>
