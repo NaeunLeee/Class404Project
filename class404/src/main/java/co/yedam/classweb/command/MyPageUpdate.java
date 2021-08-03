@@ -23,13 +23,18 @@ public class MyPageUpdate implements Command {
 		vo.setAge(Integer.valueOf(request.getParameter("age")));
 		int n = dao.memberUpdate(vo);
 		
+		String message = "";
+		
+		
 		if(n != 0) {
-			page = "myPage.do";
+			message = "수정에 성공하였습니다!";
 		}else {
-			page = "home/myPageError";
+			message = "수정에 실패했습니다.";
 		}
 		
-		return page;
+		request.setAttribute("message", message);
+		
+		return "home/myPageUpdateMsg";
 	}
 
 }

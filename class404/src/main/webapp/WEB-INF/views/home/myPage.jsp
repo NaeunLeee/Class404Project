@@ -37,6 +37,7 @@
 						<label for="age">나 이</label> <input type="text" id="age"
 							name="age" value="${member.age}" required="required">
 					</div>
+					<br>
 					<div>
 						<label for="age">권 한</label> <input type="text" id="author"
 							name="author" value="${member.author}" required="required" disabled="disabled">

@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>마이페이지 수정 상태</title>
 </head>
 <body>
-<h1>업데이트 실패</h1>
+	<div align="center">
+		<h3>${message}</h3><br>
+		<a href="home.do">홈 가기</a>
+	</div>
 </body>
 </html>
