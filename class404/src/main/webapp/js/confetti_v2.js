@@ -90,6 +90,8 @@
             particles.push(new confettiParticle(particleColor));
         }
         StartConfetti();
+        $('#stopButton').click(DeactivateConfetti);
+        $('#startButton').click(RestartConfetti);
     }
 
     function Draw() {
