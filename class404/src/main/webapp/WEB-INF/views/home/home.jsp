@@ -56,7 +56,7 @@
 
 						
 						<ul class="actions">
-							<li><a href="#" class="button big">Learn More</a></li>
+							<li><a href="classList.do" class="button big">Learn More</a></li>
 						</ul>
 					</div>
 					<span class="image object"> <img src="images/logo.png"
