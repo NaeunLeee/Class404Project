@@ -26,7 +26,7 @@
 				<th>신청일</th>
 			</tr>
 			<c:forEach var="list" items="${list}">
-				<tr onmouseover="this.style.background='#f2f2f2'"
+				<tr onmouseover="this.style.background='lightgray'"
 					onmouseout="this.style.background='white'"
 					onclick="getRecord('${list.id}')">
 					<td>${list.id}</td>

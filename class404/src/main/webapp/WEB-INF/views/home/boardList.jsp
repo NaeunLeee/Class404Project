@@ -35,7 +35,7 @@
 						<th>조회수</th>
 					</tr>
 					<c:forEach var="list" items="${list}">
-						<tr onmouseover="this.style.background='lightpink'"
+						<tr onmouseover="this.style.background='lightgray'"
 							onmouseout="this.style.background='white'"
 							onclick="getRecord('${list.bId}')">
 							<td>${ list.bId }</td>
