@@ -26,6 +26,7 @@
 		<ul class="icons">
 			<c:if test="${ empty name }">
 				<li><a href="loginForm.do" class="brands"><span class="label">로그인</span></a></li>
+				<li><a href="signupForm.do" class="brands"><span class="label">회원가입</span></a></li>
 			</c:if>
 			<c:if test="${ not empty name }">
 			<li><a href="myPage.do" class="brands"><span class="label">My Page</span></a></li>

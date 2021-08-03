@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원가입성공</title>
+<title>수강신청</title>
 <script src="js/confetti_v2.js"></script>
 <style>
 	canvas{z-index:10;pointer-events: none;position: fixed;top: 0;transform: scale(1.1);}
@@ -19,8 +19,8 @@
 <canvas id="canvas"></canvas>
 <br>
 <div align="center">
-<h2>회원가입에 성공하였습니다!!</h2>
-<a href="loginForm.do">로그인</a>
-</div>
+		<h3>${message}</h3>
+		<br> <a href="home.do">홈으로</a>
+	</div>
 </body>
 </html>
