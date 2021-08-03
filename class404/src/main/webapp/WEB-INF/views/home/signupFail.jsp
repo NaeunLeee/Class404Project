@@ -11,5 +11,6 @@
 		<h3>회원가입에 실패했습니다.</h3>
 		<br> <a href="home.do">홈 가기</a>
 	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
