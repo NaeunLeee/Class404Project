@@ -99,6 +99,7 @@ public class ClassServiceImpl implements ClassService {
 				vo.setClPlace(rs.getString("clplace"));
 				vo.setClMax(rs.getInt("clmax"));
 				vo.setClStudent(rs.getInt("clstudent"));
+				vo.setClDetail(rs.getString("cldetail"));
 			}
 			
 		} catch (SQLException e) {

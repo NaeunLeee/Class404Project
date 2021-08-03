@@ -18,7 +18,7 @@
 <div align="center">
 		<div><h3>신청 상세보기</h3></div>
 		<div>
-			<table >
+			<table class="bodys">
 				<tr>
 					<th width="100" bgcolor="f2f2f2">아이디</th>
 					<td width="70" align="center">${ vo.id } </td>
