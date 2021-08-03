@@ -48,5 +48,6 @@
 		<button type="button" onclick="location.href='teacherAdd.do'">신청등록</button>
 	</div>
 	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

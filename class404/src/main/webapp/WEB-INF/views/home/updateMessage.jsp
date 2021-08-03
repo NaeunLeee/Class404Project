@@ -11,5 +11,6 @@
 		<h3>${message}</h3><br>
 		<a href="home.do">홈 가기</a>
 	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
